@@ -13,11 +13,11 @@ const HeroAndStats = ({ onCTAClick }: HeroAndStatsProps) => {
         
         <div className="container mx-auto px-4 relative">
           <div className="max-w-4xl mx-auto text-center space-y-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-semibold">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-semibold animate-fade-in">
               🏆 Профессиональное обучение с 2008 года
             </div>
             
-            <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold leading-tight">
+            <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold leading-tight animate-fade-in-up">
               Освойте <span className="text-primary">ArchiCAD</span><br />
               за <span className="text-accent">2-3 месяца</span>
             </h1>
@@ -48,7 +48,7 @@ const HeroAndStats = ({ onCTAClick }: HeroAndStatsProps) => {
                 { value: '∞', label: 'Доступ' },
                 { value: '500+', label: 'Выпускников' },
               ].map((stat, idx) => (
-                <div key={idx} className="bg-white rounded-xl p-3 sm:p-6 shadow-md border border-gray-200">
+                <div key={idx} className="bg-white rounded-xl p-3 sm:p-6 shadow-md border border-gray-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-fade-in-up" style={{animationDelay: `${idx * 100}ms`}}>
                   <div className="text-2xl sm:text-4xl font-bold text-primary mb-1">{stat.value}</div>
                   <div className="text-xs sm:text-sm text-gray-600">{stat.label}</div>
                 </div>
