@@ -43,7 +43,7 @@ const MainContent = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-primary/5 to-accent/5">
+      <section className="py-20 from-primary/5 to-accent/5 bg-blue-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <Card className="border-2 border-primary shadow-2xl overflow-hidden">
@@ -106,7 +106,7 @@ const MainContent = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-orange-50">
+      <section className="py-20 bg-indigo-200">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
