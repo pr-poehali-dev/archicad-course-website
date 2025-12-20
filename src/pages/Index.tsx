@@ -38,6 +38,12 @@ const Index = () => {
             <Icon name="Building2" className="text-primary" size={32} />
             <span className="text-xl font-bold text-primary">ArchiCAD Pro</span>
           </div>
+          <nav className="hidden lg:flex items-center gap-8">
+            <a href="#about" className="text-foreground hover:text-primary transition-colors font-medium">О курсе</a>
+            <a href="#program" className="text-foreground hover:text-primary transition-colors font-medium">Программа</a>
+            <a href="#reviews" className="text-foreground hover:text-primary transition-colors font-medium">Отзывы</a>
+            <a href="#contact" className="text-foreground hover:text-primary transition-colors font-medium">Контакты</a>
+          </nav>
           <Button onClick={handleCTAClick} size="lg" className="hidden md:flex">
             Записаться на курс
           </Button>
@@ -263,7 +269,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-stone-200">
+      <section id="reviews" className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
@@ -279,34 +285,57 @@ const Index = () => {
                 name: 'Александра М.',
                 role: '3D дизайнер',
                 text: 'Курс превзошел все ожидания! За 3 месяца я освоила программу и уже работаю над коммерческими проектами.',
-                rating: 5
+                rating: 5,
+                avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop'
               },
               {
                 name: 'Дмитрий К.',
                 role: 'Архитектор',
                 text: 'Отличная структура курса и поддержка преподавателя. Ирина объясняет сложные вещи простым языком.',
-                rating: 5
+                rating: 5,
+                avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop'
               },
               {
                 name: 'Елена В.',
                 role: 'Фрилансер',
                 text: 'Получила все необходимые навыки для работы. Теперь зарабатываю на визуализации интерьеров удаленно.',
-                rating: 5
+                rating: 5,
+                avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop'
+              },
+              {
+                name: 'Максим П.',
+                role: 'Студент архитектуры',
+                text: 'Программа отлично структурирована. Каждый урок - новые знания и практика. Рекомендую всем начинающим!',
+                rating: 5,
+                avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop'
+              },
+              {
+                name: 'Ольга С.',
+                role: 'Дизайнер интерьеров',
+                text: 'Наконец-то освоила 3D визуализацию! Теперь могу показывать клиентам реалистичные проекты. Спасибо!',
+                rating: 5,
+                avatar: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=200&h=200&fit=crop'
               }
             ].map((review, idx) => (
               <Card key={idx} className="border-2 hover:shadow-lg transition-all duration-300">
                 <CardContent className="p-6 space-y-4">
+                  <div className="flex items-center gap-4">
+                    <img 
+                      src={review.avatar} 
+                      alt={review.name}
+                      className="w-16 h-16 rounded-full object-cover"
+                    />
+                    <div>
+                      <div className="font-semibold text-foreground">{review.name}</div>
+                      <div className="text-sm text-muted-foreground">{review.role}</div>
+                    </div>
+                  </div>
                   <div className="flex gap-1">
                     {Array.from({ length: review.rating }).map((_, i) => (
-                      <Icon key={i} name="Star" className="text-accent fill-accent" size={20} />
+                      <Icon key={i} name="Star" className="text-accent fill-accent" size={18} />
                     ))}
                   </div>
                   <p className="text-muted-foreground italic">"{review.text}"</p>
-                  <Separator />
-                  <div>
-                    <div className="font-semibold text-foreground">{review.name}</div>
-                    <div className="text-sm text-muted-foreground">{review.role}</div>
-                  </div>
                 </CardContent>
               </Card>
             ))}
@@ -314,7 +343,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20">
+      <section id="contact" className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto">
             <Card className="border-2 border-primary shadow-2xl">
