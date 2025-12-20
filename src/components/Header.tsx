@@ -5,21 +5,6 @@ interface HeaderProps {
 }
 
 const Header = ({ onCTAClick }: HeaderProps) => {
-  const scrollToSection = (e: React.MouseEvent, id: string) => {
-    e.preventDefault();
-    const element = document.getElementById(id);
-    if (element) {
-      const headerOffset = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-      
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-    }
-  };
-
   return (
     <header className="bg-white/60 backdrop-blur-md border-b border-gray-200/60 sticky top-0 z-50 shadow-sm">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
@@ -28,11 +13,11 @@ const Header = ({ onCTAClick }: HeaderProps) => {
         </div>
 
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-800">
-          <button onClick={(e) => scrollToSection(e, 'about')} className="hover:text-primary transition">О курсе</button>
-          <button onClick={(e) => scrollToSection(e, 'program')} className="hover:text-primary transition">Программа</button>
-          <button onClick={(e) => scrollToSection(e, 'portfolio')} className="hover:text-primary transition">Работы</button>
-          <button onClick={(e) => scrollToSection(e, 'reviews')} className="hover:text-primary transition">Отзывы</button>
-          <button onClick={(e) => scrollToSection(e, 'contact')} className="hover:text-primary transition">Контакты</button>
+          <a href="#about" className="hover:text-primary transition">О курсе</a>
+          <a href="#program" className="hover:text-primary transition">Программа</a>
+          <a href="#portfolio" className="hover:text-primary transition">Работы</a>
+          <a href="#reviews" className="hover:text-primary transition">Отзывы</a>
+          <a href="#contact" className="hover:text-primary transition">Контакты</a>
         </nav>
 
         <Button onClick={onCTAClick} className="bg-primary hover:bg-primary/90">
