@@ -52,9 +52,9 @@ const HeroAndStats = ({ onCTAClick }: HeroAndStatsProps) => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             {[
-              { icon: 'Users', value: '500+', label: 'Выпускников' },
-              { icon: 'Award', value: '15+', label: 'Лет опыта' },
-              { icon: 'Clock', value: '40+', label: 'Часов практики' },
+              { icon: 'BookOpen', value: '15', label: 'Уроков' },
+              { icon: 'Calendar', value: '2-3 мес', label: 'Длительность' },
+              { icon: 'Infinity', value: 'Навсегда', label: 'Доступ к курсу' },
               { icon: 'Star', value: '4.9', label: 'Рейтинг курса' },
             ].map((stat, idx) => (
               <div key={idx} className="space-y-2 animate-fade-in" style={{ animationDelay: `${idx * 0.1}s` }}>

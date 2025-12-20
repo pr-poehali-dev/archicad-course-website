@@ -51,6 +51,9 @@ const MainContent = () => {
                 <h2 className="text-3xl md:text-4xl font-bold mb-2">
                   Курс «Archicad для дизайнеров и архитекторов. Базовый уровень»
                 </h2>
+                <p className="text-primary-foreground/90 text-lg mt-3">
+                  15 уроков • 2-3 месяца обучения • Доступ навсегда
+                </p>
               </div>
               <CardContent className="p-8 md:p-12">
                 <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -77,9 +80,9 @@ const MainContent = () => {
                   <div className="bg-muted/50 p-6 rounded-lg space-y-4">
                     <h3 className="font-semibold text-lg text-foreground mb-4">Что входит в курс:</h3>
                     {[
-                      'Мгновенный доступ после оплаты',
+                      '15 практических уроков',
                       'Все материалы для изучения',
-                      'Доступ к курсу на 1 год',
+                      'Доступ к курсу навсегда',
                       'Поддержка преподавателя',
                       'Сертификат после обучения',
                       'Возможность рассрочки'
