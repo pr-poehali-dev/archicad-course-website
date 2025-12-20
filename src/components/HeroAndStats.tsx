@@ -8,7 +8,7 @@ const HeroAndStats = ({ onCTAClick }: HeroAndStatsProps) => {
   return (
     <>
       <section className="relative pt-24 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center" style={{backgroundImage: 'url(https://cdn.poehali.dev/projects/7710b90a-6ab5-4f28-96bc-4e8f387343b6/files/a43639cc-5c1a-4852-ba14-9eeb37ee692a.jpg)'}}></div>
+        <div className="absolute inset-0 bg-cover bg-center" style={{backgroundImage: 'url(https://cdn.poehali.dev/projects/7710b90a-6ab5-4f28-96bc-4e8f387343b6/files/83d297f8-8f90-4a0b-97a4-d257c8bb965c.jpg)'}}></div>
         <div className="absolute inset-0 bg-gradient-to-br from-white/60 via-blue-50/50 to-white/65"></div>
         
         <div className="container mx-auto px-4 relative">
@@ -17,24 +17,24 @@ const HeroAndStats = ({ onCTAClick }: HeroAndStatsProps) => {
               🏆 Профессиональное обучение с 2008 года
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+            <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold leading-tight">
               Освойте <span className="text-primary">ArchiCAD</span><br />
               за <span className="text-accent">2-3 месяца</span>
             </h1>
             
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-base sm:text-xl text-gray-600 max-w-2xl mx-auto">
               Практический курс 3D визуализации интерьеров. 15 уроков, доступ навсегда. 
               Начните зарабатывать на своих навыках уже через 3 месяца.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-              <Button onClick={onCTAClick} size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8">
+              <Button onClick={onCTAClick} size="lg" className="bg-primary hover:bg-primary/90 text-base sm:text-lg px-6 sm:px-8">
                 Начать обучение
               </Button>
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="border-2 text-lg px-8"
+                className="border-2 text-base sm:text-lg px-6 sm:px-8"
                 onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Подробнее о курсе

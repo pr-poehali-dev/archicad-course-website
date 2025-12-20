@@ -19,10 +19,10 @@ const MainContent = () => {
               <div className="inline-block px-4 py-1 bg-accent/10 rounded-full text-accent text-sm font-semibold">
                 Автор курса
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold">
+              <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold">
                 Ирина Бурцева
               </h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-base sm:text-lg text-gray-600">
                 Практикующий 3D визуализатор интерьеров. Специалист по программам Archicad и 3D Max. 
                 Основатель онлайн школы «Учитель дома».
               </p>
@@ -52,7 +52,7 @@ const MainContent = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               Курс «Archicad для дизайнеров и архитекторов»
             </h2>
-            <p className="text-xl text-white/90">
+            <p className="text-base sm:text-xl text-white/90">
               15 уроков • 2-3 месяца • Доступ навсегда
             </p>
           </div>
@@ -60,7 +60,7 @@ const MainContent = () => {
           <div className="bg-white text-gray-900 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12">
               <div className="text-center md:text-left">
-                <div className="text-6xl font-bold text-primary mb-2">12 900 ₽</div>
+                <div className="text-4xl sm:text-6xl font-bold text-primary mb-2">12 900 ₽</div>
                 <div className="text-lg text-gray-600 mb-6">Полная стоимость</div>
                 <div className="bg-accent/10 p-4 rounded-lg">
                   <div className="flex items-center gap-3">
@@ -133,7 +133,7 @@ const MainContent = () => {
         <div className="absolute inset-0 bg-white/50"></div>
         <div className="container mx-auto px-4 relative">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4">
               Программа курса
             </h2>
             <p className="text-lg text-gray-600">

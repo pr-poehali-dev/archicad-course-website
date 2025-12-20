@@ -31,10 +31,10 @@ const ContactAndFooter = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4">
                 Записаться на курс
               </h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-base sm:text-lg text-gray-600">
                 Заполните форму и получите консультацию
               </p>
             </div>
