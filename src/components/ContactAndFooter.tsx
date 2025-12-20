@@ -27,34 +27,34 @@ const ContactAndFooter = () => {
 
   return (
     <>
-      <section id="contact" className="py-32 bg-gray-50">
-        <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto">
+      <section id="contact" className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-2xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-6xl font-bold mb-4">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">
                 Записаться на курс
               </h2>
-              <p className="text-xl text-muted-foreground">
-                Заполните форму и получите бесплатную консультацию
+              <p className="text-lg text-gray-600">
+                Заполните форму и получите консультацию
               </p>
             </div>
 
-            <Card className="border-2 shadow-2xl">
-              <CardContent className="p-8 md:p-12">
+            <Card className="shadow-xl">
+              <CardContent className="p-8">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="space-y-2">
-                    <Label htmlFor="name" className="text-base font-semibold">Ваше имя *</Label>
+                    <Label htmlFor="name">Ваше имя *</Label>
                     <Input
                       id="name"
                       placeholder="Иван Иванов"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       required
-                      className="h-14 text-base"
+                      className="h-12"
                     />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="phone" className="text-base font-semibold">Телефон *</Label>
+                    <Label htmlFor="phone">Телефон *</Label>
                     <Input
                       id="phone"
                       type="tel"
@@ -62,11 +62,11 @@ const ContactAndFooter = () => {
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       required
-                      className="h-14 text-base"
+                      className="h-12"
                     />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="email" className="text-base font-semibold">Email *</Label>
+                    <Label htmlFor="email">Email *</Label>
                     <Input
                       id="email"
                       type="email"
@@ -74,14 +74,14 @@ const ContactAndFooter = () => {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       required
-                      className="h-14 text-base"
+                      className="h-12"
                     />
                   </div>
-                  <Button type="submit" size="lg" className="w-full text-lg py-7 bg-accent hover:bg-accent/90 font-semibold">
+                  <Button type="submit" size="lg" className="w-full bg-accent hover:bg-accent/90">
                     Отправить заявку
-                    <Icon name="Send" className="ml-2" size={20} />
+                    <Icon name="Send" className="ml-2" size={18} />
                   </Button>
-                  <p className="text-sm text-muted-foreground text-center pt-2">
+                  <p className="text-xs text-gray-500 text-center">
                     Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности
                   </p>
                 </form>
@@ -91,57 +91,51 @@ const ContactAndFooter = () => {
         </div>
       </section>
 
-      <footer className="bg-primary text-white py-16">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-12 mb-12">
+      <footer className="bg-gray-900 text-white py-12">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
-                  <Icon name="Layers" size={20} />
-                </div>
-                <div>
-                  <div className="font-bold text-xl">ArchiCAD Pro</div>
-                  <div className="text-sm text-white/70">Онлайн школа</div>
-                </div>
+              <div className="font-bold text-xl mb-4">
+                <span className="text-primary">Archi</span><span className="text-accent">CAD</span>
               </div>
-              <p className="text-white/80 leading-relaxed">
-                Профессиональное обучение 3D визуализации интерьеров с 2008 года
+              <p className="text-gray-400 text-sm">
+                Профессиональное обучение 3D визуализации с 2008 года
               </p>
             </div>
             
             <div>
-              <h4 className="font-bold text-lg mb-4">Контакты</h4>
-              <div className="space-y-3 text-white/80">
-                <div className="flex items-center gap-3">
-                  <Icon name="Mail" size={18} />
+              <h4 className="font-bold mb-4">Контакты</h4>
+              <div className="space-y-2 text-sm text-gray-400">
+                <div className="flex items-center gap-2">
+                  <Icon name="Mail" size={16} />
                   <span>info@archicadpro.ru</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <Icon name="Phone" size={18} />
+                <div className="flex items-center gap-2">
+                  <Icon name="Phone" size={16} />
                   <span>+7 (999) 123-45-67</span>
                 </div>
               </div>
             </div>
             
             <div>
-              <h4 className="font-bold text-lg mb-4">Социальные сети</h4>
+              <h4 className="font-bold mb-4">Социальные сети</h4>
               <div className="flex gap-3">
-                <Button variant="ghost" size="icon" className="hover:bg-white/10 text-white border border-white/20">
-                  <Icon name="Instagram" size={20} />
+                <Button variant="ghost" size="icon" className="hover:bg-white/10">
+                  <Icon name="Instagram" size={18} />
                 </Button>
-                <Button variant="ghost" size="icon" className="hover:bg-white/10 text-white border border-white/20">
-                  <Icon name="Youtube" size={20} />
+                <Button variant="ghost" size="icon" className="hover:bg-white/10">
+                  <Icon name="Youtube" size={18} />
                 </Button>
-                <Button variant="ghost" size="icon" className="hover:bg-white/10 text-white border border-white/20">
-                  <Icon name="MessageCircle" size={20} />
+                <Button variant="ghost" size="icon" className="hover:bg-white/10">
+                  <Icon name="MessageCircle" size={18} />
                 </Button>
               </div>
             </div>
           </div>
           
-          <div className="border-t border-white/20 pt-8 text-center text-white/70 text-sm space-y-2">
+          <div className="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
             <p>© 2024 ArchiCAD Pro. Все права защищены.</p>
-            <p>erid: 2VtzqvHfAQk</p>
+            <p className="mt-2">erid: 2VtzqvHfAQk</p>
           </div>
         </div>
       </footer>
