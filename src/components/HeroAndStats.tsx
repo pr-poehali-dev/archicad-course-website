@@ -9,7 +9,7 @@ const HeroAndStats = ({ onCTAClick }: HeroAndStatsProps) => {
     <>
       <section className="relative pt-24 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center" style={{backgroundImage: 'url(https://cdn.poehali.dev/projects/7710b90a-6ab5-4f28-96bc-4e8f387343b6/files/83d297f8-8f90-4a0b-97a4-d257c8bb965c.jpg)'}}></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-white/60 via-blue-50/50 to-white/65"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-white/85 via-white/75 to-white/85"></div>
         
         <div className="container mx-auto px-4 relative">
           <div className="max-w-4xl mx-auto text-center space-y-8">
