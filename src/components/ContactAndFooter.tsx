@@ -108,9 +108,9 @@ const ContactAndFooter = () => {
         </div>
       </section>
 
-      <footer className="bg-gray-900 text-white py-12">
+      <footer className="bg-gray-900 text-white py-8">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
+          <div className="grid md:grid-cols-3 gap-6 mb-6">
             <div>
               <div className="font-bold text-xl mb-4 text-gray-300">
                 <span className="text-blue-400">Archi</span><span className="text-gray-400">CAD</span>
