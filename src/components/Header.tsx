@@ -5,30 +5,34 @@ interface HeaderProps {
 }
 
 const Header = ({ onCTAClick }: HeaderProps) => {
-  const scrollToSection = (id: string) => {
+  const scrollToSection = (e: React.MouseEvent, id: string) => {
+    e.preventDefault();
     const element = document.getElementById(id);
     if (element) {
-      const offsetTop = element.getBoundingClientRect().top + window.scrollY - 80;
+      const headerOffset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      
       window.scrollTo({
-        top: offsetTop,
+        top: offsetPosition,
         behavior: 'smooth'
       });
     }
   };
 
   return (
-    <header className="bg-white/25 backdrop-blur-md border-b border-gray-200/30 sticky top-0 z-50 shadow-sm">
+    <header className="bg-white/60 backdrop-blur-md border-b border-gray-200/60 sticky top-0 z-50 shadow-sm">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="font-bold text-2xl text-gray-800">
           <span className="text-primary">Archi</span><span className="text-gray-600">CAD</span>
         </div>
 
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-800">
-          <button onClick={() => scrollToSection('about')} className="hover:text-primary transition">О курсе</button>
-          <button onClick={() => scrollToSection('program')} className="hover:text-primary transition">Программа</button>
-          <button onClick={() => scrollToSection('portfolio')} className="hover:text-primary transition">Работы</button>
-          <button onClick={() => scrollToSection('reviews')} className="hover:text-primary transition">Отзывы</button>
-          <button onClick={() => scrollToSection('contact')} className="hover:text-primary transition">Контакты</button>
+          <button onClick={(e) => scrollToSection(e, 'about')} className="hover:text-primary transition">О курсе</button>
+          <button onClick={(e) => scrollToSection(e, 'program')} className="hover:text-primary transition">Программа</button>
+          <button onClick={(e) => scrollToSection(e, 'portfolio')} className="hover:text-primary transition">Работы</button>
+          <button onClick={(e) => scrollToSection(e, 'reviews')} className="hover:text-primary transition">Отзывы</button>
+          <button onClick={(e) => scrollToSection(e, 'contact')} className="hover:text-primary transition">Контакты</button>
         </nav>
 
         <Button onClick={onCTAClick} className="bg-primary hover:bg-primary/90">
