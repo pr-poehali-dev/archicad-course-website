@@ -242,48 +242,45 @@ const MainContent = () => {
                 role: '3D дизайнер',
                 text: 'Курс превзошел все ожидания! За 3 месяца я освоила программу и уже работаю над коммерческими проектами.',
                 rating: 5,
-                initials: 'АМ',
-                color: 'bg-purple-500'
+                photo: 'https://cdn.poehali.dev/projects/7710b90a-6ab5-4f28-96bc-4e8f387343b6/files/342b868c-b375-4960-809f-44c672e6ff53.jpg'
               },
               {
                 name: 'Дмитрий К.',
                 role: 'Архитектор',
                 text: 'Отличная структура курса и поддержка преподавателя. Ирина объясняет сложные вещи простым языком.',
                 rating: 5,
-                initials: 'ДК',
-                color: 'bg-blue-500'
+                photo: 'https://cdn.poehali.dev/projects/7710b90a-6ab5-4f28-96bc-4e8f387343b6/files/8828c92f-d4c0-4d74-8f56-c4b461a2006c.jpg'
               },
               {
                 name: 'Елена В.',
                 role: 'Фрилансер',
                 text: 'Получила все необходимые навыки для работы. Теперь зарабатываю на визуализации интерьеров удаленно.',
                 rating: 5,
-                initials: 'ЕВ',
-                color: 'bg-pink-500'
+                photo: 'https://cdn.poehali.dev/projects/7710b90a-6ab5-4f28-96bc-4e8f387343b6/files/04250176-fb7e-4889-80e1-912da9662f4c.jpg'
               },
               {
                 name: 'Максим П.',
                 role: 'Студент архитектуры',
                 text: 'Программа отлично структурирована. Каждый урок - новые знания и практика. Рекомендую всем начинающим!',
                 rating: 5,
-                initials: 'МП',
-                color: 'bg-green-500'
+                photo: 'https://cdn.poehali.dev/projects/7710b90a-6ab5-4f28-96bc-4e8f387343b6/files/5a6a2565-6c8b-41a1-98b7-c6b3735648bc.jpg'
               },
               {
                 name: 'Ольга С.',
                 role: 'Дизайнер интерьеров',
                 text: 'Наконец-то освоила 3D визуализацию! Теперь могу показывать клиентам реалистичные проекты. Спасибо!',
                 rating: 5,
-                initials: 'ОС',
-                color: 'bg-orange-500'
+                photo: 'https://cdn.poehali.dev/projects/7710b90a-6ab5-4f28-96bc-4e8f387343b6/files/b97303af-d278-49d1-93e7-c21a79a9a5e8.jpg'
               }
             ].map((review, idx) => (
               <Card key={idx} className="border-2 hover:shadow-lg transition-all duration-300">
                 <CardContent className="p-6 space-y-4">
                   <div className="flex items-center gap-4">
-                    <div className={`w-16 h-16 rounded-full ${review.color} flex items-center justify-center text-white font-bold text-xl flex-shrink-0`}>
-                      {review.initials}
-                    </div>
+                    <img 
+                      src={review.photo} 
+                      alt={review.name}
+                      className="w-16 h-16 rounded-full object-cover flex-shrink-0"
+                    />
                     <div>
                       <div className="font-semibold text-foreground">{review.name}</div>
                       <div className="text-sm text-muted-foreground">{review.role}</div>
@@ -342,6 +339,63 @@ const MainContent = () => {
                   </div>
                   <h3 className="text-xl font-semibold">{item.title}</h3>
                   <p className="text-primary-foreground/70">{item.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
+              Примеры работ студентов
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Профессиональные проекты наших выпускников
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {[
+              {
+                image: 'https://cdn.poehali.dev/projects/7710b90a-6ab5-4f28-96bc-4e8f387343b6/files/c348d25f-3457-43d7-96e4-ebed29457425.jpg',
+                title: 'Современная гостиная',
+                author: 'Александра М.',
+                description: 'Дипломный проект курса'
+              },
+              {
+                image: 'https://cdn.poehali.dev/projects/7710b90a-6ab5-4f28-96bc-4e8f387343b6/files/a0f2363e-56f2-4999-9039-4873086f087c.jpg',
+                title: 'Кухня в стиле минимализм',
+                author: 'Дмитрий К.',
+                description: 'Коммерческий заказ'
+              },
+              {
+                image: 'https://cdn.poehali.dev/projects/7710b90a-6ab5-4f28-96bc-4e8f387343b6/files/00a0a095-81c5-423b-93bc-3416d121a90f.jpg',
+                title: 'Спальня в современном стиле',
+                author: 'Елена В.',
+                description: 'Проект для портфолио'
+              },
+              {
+                image: 'https://cdn.poehali.dev/projects/7710b90a-6ab5-4f28-96bc-4e8f387343b6/files/afeedc27-8145-4486-8f4d-30f84e23e4ac.jpg',
+                title: 'Офисное пространство',
+                author: 'Максим П.',
+                description: 'Дипломная работа'
+              }
+            ].map((work, idx) => (
+              <Card key={idx} className="overflow-hidden border-2 hover:shadow-2xl transition-all duration-300 group">
+                <div className="relative overflow-hidden">
+                  <img 
+                    src={work.image} 
+                    alt={work.title}
+                    className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold text-foreground mb-2">{work.title}</h3>
+                  <p className="text-sm text-muted-foreground mb-1">Автор: {work.author}</p>
+                  <p className="text-sm text-primary font-medium">{work.description}</p>
                 </CardContent>
               </Card>
             ))}
