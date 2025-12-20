@@ -41,16 +41,16 @@ const HeroAndStats = ({ onCTAClick }: HeroAndStatsProps) => {
               </Button>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-12 max-w-3xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 pt-12 max-w-3xl mx-auto">
               {[
                 { value: '15', label: 'Уроков' },
                 { value: '2-3', label: 'Месяца' },
                 { value: '∞', label: 'Доступ' },
                 { value: '500+', label: 'Выпускников' },
               ].map((stat, idx) => (
-                <div key={idx} className="bg-white rounded-xl p-6 shadow-md border border-gray-200">
-                  <div className="text-4xl font-bold text-primary mb-1">{stat.value}</div>
-                  <div className="text-sm text-gray-600">{stat.label}</div>
+                <div key={idx} className="bg-white rounded-xl p-3 sm:p-6 shadow-md border border-gray-200">
+                  <div className="text-2xl sm:text-4xl font-bold text-primary mb-1">{stat.value}</div>
+                  <div className="text-xs sm:text-sm text-gray-600">{stat.label}</div>
                 </div>
               ))}
             </div>
