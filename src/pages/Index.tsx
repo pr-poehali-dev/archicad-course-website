@@ -72,7 +72,7 @@ const Index = () => {
             <div className="relative animate-slide-up">
               <div className="aspect-square bg-gradient-to-br from-primary to-accent rounded-2xl shadow-2xl overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=800" 
+                  src="https://cdn.poehali.dev/projects/7710b90a-6ab5-4f28-96bc-4e8f387343b6/files/4d0627c2-e99d-49f1-9f82-9035023ce50c.jpg" 
                   alt="ArchiCAD Design" 
                   className="w-full h-full object-cover opacity-90"
                 />
