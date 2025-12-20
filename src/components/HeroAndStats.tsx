@@ -8,8 +8,8 @@ const HeroAndStats = ({ onCTAClick }: HeroAndStatsProps) => {
   return (
     <>
       <section className="relative pt-24 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center" style={{backgroundImage: 'url(https://cdn.poehali.dev/projects/7710b90a-6ab5-4f28-96bc-4e8f387343b6/files/090120c8-f258-4bd9-8f10-25d1cfddcba8.jpg)'}}></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-white/50 via-blue-50/40 to-white/55"></div>
+        <div className="absolute inset-0 bg-cover bg-center" style={{backgroundImage: 'url(https://cdn.poehali.dev/projects/7710b90a-6ab5-4f28-96bc-4e8f387343b6/files/48171516-ea96-4009-8a6c-73e6b9c47819.jpg)'}}></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-white/60 via-blue-50/50 to-white/65"></div>
         
         <div className="container mx-auto px-4 relative">
           <div className="max-w-4xl mx-auto text-center space-y-8">

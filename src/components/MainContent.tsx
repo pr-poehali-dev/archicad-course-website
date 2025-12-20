@@ -130,7 +130,7 @@ const MainContent = () => {
 
       <section id="program" className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center" style={{backgroundImage: 'url(https://cdn.poehali.dev/projects/7710b90a-6ab5-4f28-96bc-4e8f387343b6/files/4025bac0-9d71-4023-bd14-b89ddbe5df93.jpg)'}}></div>
-        <div className="absolute inset-0 bg-white/60"></div>
+        <div className="absolute inset-0 bg-white/50"></div>
         <div className="container mx-auto px-4 relative">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
