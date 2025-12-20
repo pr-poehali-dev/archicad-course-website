@@ -44,42 +44,43 @@ const Index = () => {
         </div>
       </header>
 
-      <section className="relative bg-gradient-to-br from-primary/5 via-background to-accent/5 py-20 md:py-32 overflow-hidden">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+      <section className="relative min-h-screen flex items-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://cdn.poehali.dev/projects/7710b90a-6ab5-4f28-96bc-4e8f387343b6/files/4d0627c2-e99d-49f1-9f82-9035023ce50c.jpg" 
+            alt="ArchiCAD Background" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/85 to-primary/70"></div>
+        </div>
+        <div className="container mx-auto px-4 relative z-10 py-20">
+          <div className="max-w-3xl">
             <div className="space-y-6 animate-fade-in">
-              <div className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-semibold">
+              <div className="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-semibold">
                 Профессиональное обучение
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold leading-tight text-foreground">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-white">
                 Освойте ArchiCAD<br />с нуля до PRO
               </h1>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-lg md:text-xl text-white/90 leading-relaxed">
                 Практический курс 3D визуализации интерьеров от специалиста с опытом работы в Archicad и 3D Max. Научитесь создавать профессиональные проекты и зарабатывать на своих навыках.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Button onClick={handleCTAClick} size="lg" className="text-lg px-8 py-6">
+                <Button onClick={handleCTAClick} size="lg" className="text-lg px-8 py-6 bg-accent hover:bg-accent/90">
                   Начать обучение
                   <Icon name="ArrowRight" className="ml-2" size={20} />
                 </Button>
-                <Button variant="outline" size="lg" className="text-lg px-8 py-6" onClick={() => {
+                <Button variant="outline" size="lg" className="text-lg px-8 py-6 border-white text-white hover:bg-white hover:text-primary" onClick={() => {
                   document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
                 }}>
                   Узнать больше
                 </Button>
               </div>
             </div>
-            <div className="relative animate-slide-up">
-              <div className="aspect-square bg-gradient-to-br from-primary to-accent rounded-2xl shadow-2xl overflow-hidden">
-                <img 
-                  src="https://cdn.poehali.dev/projects/7710b90a-6ab5-4f28-96bc-4e8f387343b6/files/4d0627c2-e99d-49f1-9f82-9035023ce50c.jpg" 
-                  alt="ArchiCAD Design" 
-                  className="w-full h-full object-cover opacity-90"
-                />
-              </div>
-              <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-accent rounded-full blur-3xl opacity-30"></div>
-            </div>
           </div>
+        </div>
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
+          <Icon name="ChevronDown" className="text-white" size={32} />
         </div>
       </section>
 
