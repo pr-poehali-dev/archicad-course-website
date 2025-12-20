@@ -43,6 +43,66 @@ const MainContent = () => {
         </div>
       </section>
 
+      <section className="py-20 bg-gradient-to-br from-primary/5 to-accent/5">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <Card className="border-2 border-primary shadow-2xl overflow-hidden">
+              <div className="bg-primary text-primary-foreground p-8 text-center">
+                <h2 className="text-3xl md:text-4xl font-bold mb-2">
+                  Курс «Archicad для дизайнеров и архитекторов. Базовый уровень»
+                </h2>
+              </div>
+              <CardContent className="p-8 md:p-12">
+                <div className="grid md:grid-cols-2 gap-8 items-center">
+                  <div className="text-center md:text-left">
+                    <div className="mb-4">
+                      <div className="text-5xl md:text-6xl font-bold text-primary mb-2">12 900 ₽</div>
+                      <div className="text-xl text-muted-foreground">Стоимость курса</div>
+                    </div>
+                    <Separator className="my-6" />
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-3">
+                        <Icon name="CreditCard" className="text-accent" size={24} />
+                        <div>
+                          <div className="font-semibold text-foreground">Оплата Долями</div>
+                          <div className="text-sm text-muted-foreground">от 3 225 ₽ × 4 платежа</div>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <Icon name="Shield" className="text-accent" size={24} />
+                        <div className="text-sm text-muted-foreground">Безопасная оплата на нашем сайте</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-muted/50 p-6 rounded-lg space-y-4">
+                    <h3 className="font-semibold text-lg text-foreground mb-4">Что входит в курс:</h3>
+                    {[
+                      'Мгновенный доступ после оплаты',
+                      'Все материалы для изучения',
+                      'Доступ к курсу на 1 год',
+                      'Поддержка преподавателя',
+                      'Сертификат после обучения',
+                      'Возможность рассрочки'
+                    ].map((item, idx) => (
+                      <div key={idx} className="flex items-start gap-2">
+                        <Icon name="Check" className="text-accent flex-shrink-0 mt-0.5" size={20} />
+                        <span className="text-foreground text-sm">{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className="mt-8 p-4 bg-accent/10 rounded-lg border border-accent/20">
+                  <p className="text-sm text-foreground text-center">
+                    <Icon name="Info" className="inline-block mr-2 text-accent" size={18} />
+                    Оплата производится на нашем сайте. После оплаты вы получите доступ к просмотру материала и сможете приступить к изучению.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-orange-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -219,7 +279,8 @@ const MainContent = () => {
                     <img 
                       src={review.avatar} 
                       alt={review.name}
-                      className="w-16 h-16 rounded-full object-cover"
+                      className="w-16 h-16 rounded-full object-cover flex-shrink-0"
+                      loading="lazy"
                     />
                     <div>
                       <div className="font-semibold text-foreground">{review.name}</div>
