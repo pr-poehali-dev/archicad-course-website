@@ -343,6 +343,106 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="py-20 bg-primary text-primary-foreground">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">
+              Ваши возможности после курса
+            </h2>
+            <p className="text-lg text-primary-foreground/80 max-w-2xl mx-auto">
+              Выпускники курса успешно работают в различных сферах
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            {[
+              {
+                icon: 'Briefcase',
+                title: 'Работа в студии',
+                description: 'Трудоустройство в архитектурные и дизайн-студии'
+              },
+              {
+                icon: 'Home',
+                title: 'Фриланс',
+                description: 'Удаленная работа на международных платформах'
+              },
+              {
+                icon: 'TrendingUp',
+                title: 'Доход от 60 000 ₽',
+                description: 'Средний доход начинающих специалистов'
+              },
+              {
+                icon: 'Users',
+                title: 'Собственные проекты',
+                description: 'Создание портфолио и привлечение клиентов'
+              }
+            ].map((item, idx) => (
+              <Card key={idx} className="bg-primary-foreground/10 border-primary-foreground/20 hover:bg-primary-foreground/20 transition-all duration-300">
+                <CardContent className="p-6 text-center space-y-3">
+                  <div className="w-16 h-16 rounded-full bg-accent mx-auto flex items-center justify-center">
+                    <Icon name={item.icon as any} className="text-white" size={32} />
+                  </div>
+                  <h3 className="text-xl font-semibold">{item.title}</h3>
+                  <p className="text-primary-foreground/70">{item.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
+                Частые вопросы
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Ответы на популярные вопросы о курсе
+              </p>
+            </div>
+            <div className="space-y-4">
+              {[
+                {
+                  question: 'Нужен ли опыт работы в 3D программах?',
+                  answer: 'Нет, курс разработан для новичков. Мы начинаем с основ и постепенно переходим к сложным темам. Главное - желание учиться!'
+                },
+                {
+                  question: 'Какой компьютер нужен для обучения?',
+                  answer: 'Рекомендуем компьютер с процессором Intel Core i5 или выше, 8 ГБ оперативной памяти и видеокартой с 2 ГБ памяти. Точные требования высылаем после записи.'
+                },
+                {
+                  question: 'Сколько времени нужно уделять обучению?',
+                  answer: 'Оптимально 2-3 часа в день. Программа рассчитана на 2-3 месяца при таком темпе. Можно учиться быстрее или медленнее - доступ к материалам на год.'
+                },
+                {
+                  question: 'Помогаете ли с трудоустройством?',
+                  answer: 'Да! Мы даём рекомендации по созданию портфолио, составлению резюме и поиску первых заказов. Лучших студентов рекомендуем партнёрским компаниям.'
+                },
+                {
+                  question: 'Какой документ выдаётся после обучения?',
+                  answer: 'После успешной защиты итогового проекта выдаём сертификат о прохождении курса, который можно добавить в портфолио и резюме.'
+                },
+                {
+                  question: 'Можно ли оплатить курс частями?',
+                  answer: 'Да, доступна рассрочка. Подробности уточняйте при записи - подберём удобный вариант оплаты для вас.'
+                }
+              ].map((faq, idx) => (
+                <Card key={idx} className="border-2 hover:border-primary transition-all duration-300">
+                  <CardContent className="p-6">
+                    <h3 className="text-lg font-semibold text-foreground mb-3 flex items-start gap-2">
+                      <Icon name="HelpCircle" className="text-primary flex-shrink-0 mt-1" size={20} />
+                      {faq.question}
+                    </h3>
+                    <p className="text-muted-foreground pl-7">{faq.answer}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="contact" className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto">
