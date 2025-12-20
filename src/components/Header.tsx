@@ -8,7 +8,11 @@ const Header = ({ onCTAClick }: HeaderProps) => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const offsetTop = element.getBoundingClientRect().top + window.scrollY - 80;
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
+      });
     }
   };
 
