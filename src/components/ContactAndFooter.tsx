@@ -77,7 +77,7 @@ const ContactAndFooter = () => {
                       className="h-12"
                     />
                   </div>
-                  <Button type="submit" size="lg" className="w-full bg-accent hover:bg-accent/90">
+                  <Button type="submit" size="lg" className="w-full bg-primary hover:bg-primary/90">
                     Отправить заявку
                     <Icon name="Send" className="ml-2" size={18} />
                   </Button>
@@ -95,8 +95,8 @@ const ContactAndFooter = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
-              <div className="font-bold text-xl mb-4">
-                <span className="text-primary">Archi</span><span className="text-accent">CAD</span>
+              <div className="font-bold text-xl mb-4 text-gray-300">
+                <span className="text-blue-400">Archi</span><span className="text-gray-400">CAD</span>
               </div>
               <p className="text-gray-400 text-sm">
                 Профессиональное обучение 3D визуализации с 2008 года

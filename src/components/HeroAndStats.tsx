@@ -7,12 +7,12 @@ interface HeroAndStatsProps {
 const HeroAndStats = ({ onCTAClick }: HeroAndStatsProps) => {
   return (
     <>
-      <section className="relative pt-24 pb-20 bg-gradient-to-br from-blue-50 via-purple-50 to-white overflow-hidden">
+      <section className="relative pt-24 pb-20 bg-gradient-to-br from-gray-50 via-blue-50 to-white overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         
         <div className="container mx-auto px-4 relative">
           <div className="max-w-4xl mx-auto text-center space-y-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 rounded-full text-accent text-sm font-semibold">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-semibold">
               🏆 Профессиональное обучение с 2008 года
             </div>
             
@@ -27,7 +27,7 @@ const HeroAndStats = ({ onCTAClick }: HeroAndStatsProps) => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-              <Button onClick={onCTAClick} size="lg" className="bg-accent hover:bg-accent/90 text-lg px-8">
+              <Button onClick={onCTAClick} size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8">
                 Начать обучение
               </Button>
               <Button 
@@ -47,7 +47,7 @@ const HeroAndStats = ({ onCTAClick }: HeroAndStatsProps) => {
                 { value: '∞', label: 'Доступ' },
                 { value: '500+', label: 'Выпускников' },
               ].map((stat, idx) => (
-                <div key={idx} className="bg-white rounded-xl p-6 shadow-lg">
+                <div key={idx} className="bg-white rounded-xl p-6 shadow-md border border-gray-200">
                   <div className="text-4xl font-bold text-primary mb-1">{stat.value}</div>
                   <div className="text-sm text-gray-600">{stat.label}</div>
                 </div>

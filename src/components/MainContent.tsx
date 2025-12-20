@@ -9,7 +9,7 @@ const MainContent = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             <div>
               <img 
-                src="https://cdn.poehali.dev/projects/7710b90a-6ab5-4f28-96bc-4e8f387343b6/files/6184fd3d-a63b-4f32-9524-53cc5d8f7a00.jpg"
+                src="https://cdn.poehali.dev/files/Ирина 2.jpg"
                 alt="Ирина Бурцева" 
                 className="rounded-2xl shadow-xl w-full"
               />
@@ -46,7 +46,7 @@ const MainContent = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-primary to-blue-700 text-white">
+      <section className="py-20 bg-gradient-to-br from-gray-700 to-gray-800 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -290,7 +290,7 @@ const MainContent = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-accent to-purple-700 text-white">
+      <section className="py-20 bg-gradient-to-br from-gray-600 to-gray-700 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -302,7 +302,7 @@ const MainContent = () => {
             {[
               { icon: 'Briefcase', title: 'Работа в студии' },
               { icon: 'Home', title: 'Фриланс' },
-              { icon: 'TrendingUp', title: 'От 60 000 ₽' },
+              { icon: 'TrendingUp', title: 'От 150 000 ₽' },
               { icon: 'Users', title: 'Свои проекты' }
             ].map((item, idx) => (
               <div key={idx} className="bg-white/10 backdrop-blur p-6 rounded-xl text-center">

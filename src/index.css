@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Slab:wght@500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -15,16 +15,16 @@
     --popover: 0 0% 100%;
     --popover-foreground: 220 26% 14%;
 
-    --primary: 220 70% 50%;
+    --primary: 210 25% 45%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 10% 95%;
-    --secondary-foreground: 220 70% 50%;
+    --secondary: 210 15% 92%;
+    --secondary-foreground: 210 25% 45%;
 
-    --muted: 220 10% 95%;
-    --muted-foreground: 220 10% 40%;
+    --muted: 210 10% 95%;
+    --muted-foreground: 210 10% 40%;
 
-    --accent: 270 80% 55%;
+    --accent: 200 15% 55%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -92,7 +92,7 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: "Manrope", sans-serif;
+    font-family: "Inter", sans-serif;
   }
 
   h1,
@@ -101,7 +101,7 @@
   h4,
   h5,
   h6 {
-    font-family: "Space Grotesk", sans-serif;
+    font-family: "Roboto Slab", serif;
     font-weight: 700;
     letter-spacing: -0.01em;
   }
