@@ -91,6 +91,23 @@ const ContactAndFooter = () => {
         </div>
       </section>
 
+      <section className="py-16 bg-gradient-to-br from-gray-100 to-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Хотите узнать больше?</h2>
+          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+            Откройте каталог всех наших курсов и выберите программу, которая подходит именно вам
+          </p>
+          <Button 
+            size="lg" 
+            className="bg-primary hover:bg-primary/90 text-lg px-8"
+            onClick={() => window.open('https://ihclick.ru/?idp=314945&link=/catalog/', '_blank')}
+          >
+            <Icon name="BookOpen" className="mr-2" size={20} />
+            Посмотреть все курсы
+          </Button>
+        </div>
+      </section>
+
       <footer className="bg-gray-900 text-white py-12">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8 mb-8">

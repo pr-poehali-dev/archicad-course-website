@@ -7,8 +7,9 @@ interface HeroAndStatsProps {
 const HeroAndStats = ({ onCTAClick }: HeroAndStatsProps) => {
   return (
     <>
-      <section className="relative pt-24 pb-20 bg-gradient-to-br from-gray-50 via-blue-50 to-white overflow-hidden">
-        <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+      <section className="relative pt-24 pb-20 overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center" style={{backgroundImage: 'url(https://cdn.poehali.dev/projects/7710b90a-6ab5-4f28-96bc-4e8f387343b6/files/ee059787-49d6-4d78-a23b-aff5f69e4b1a.jpg)'}}></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-white/95 via-blue-50/90 to-white/95"></div>
         
         <div className="container mx-auto px-4 relative">
           <div className="max-w-4xl mx-auto text-center space-y-8">
