@@ -242,46 +242,48 @@ const MainContent = () => {
                 role: '3D дизайнер',
                 text: 'Курс превзошел все ожидания! За 3 месяца я освоила программу и уже работаю над коммерческими проектами.',
                 rating: 5,
-                avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop'
+                initials: 'АМ',
+                color: 'bg-purple-500'
               },
               {
                 name: 'Дмитрий К.',
                 role: 'Архитектор',
                 text: 'Отличная структура курса и поддержка преподавателя. Ирина объясняет сложные вещи простым языком.',
                 rating: 5,
-                avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop'
+                initials: 'ДК',
+                color: 'bg-blue-500'
               },
               {
                 name: 'Елена В.',
                 role: 'Фрилансер',
                 text: 'Получила все необходимые навыки для работы. Теперь зарабатываю на визуализации интерьеров удаленно.',
                 rating: 5,
-                avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop'
+                initials: 'ЕВ',
+                color: 'bg-pink-500'
               },
               {
                 name: 'Максим П.',
                 role: 'Студент архитектуры',
                 text: 'Программа отлично структурирована. Каждый урок - новые знания и практика. Рекомендую всем начинающим!',
                 rating: 5,
-                avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop'
+                initials: 'МП',
+                color: 'bg-green-500'
               },
               {
                 name: 'Ольга С.',
                 role: 'Дизайнер интерьеров',
                 text: 'Наконец-то освоила 3D визуализацию! Теперь могу показывать клиентам реалистичные проекты. Спасибо!',
                 rating: 5,
-                avatar: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=200&h=200&fit=crop'
+                initials: 'ОС',
+                color: 'bg-orange-500'
               }
             ].map((review, idx) => (
               <Card key={idx} className="border-2 hover:shadow-lg transition-all duration-300">
                 <CardContent className="p-6 space-y-4">
                   <div className="flex items-center gap-4">
-                    <img 
-                      src={review.avatar} 
-                      alt={review.name}
-                      className="w-16 h-16 rounded-full object-cover flex-shrink-0"
-                      loading="lazy"
-                    />
+                    <div className={`w-16 h-16 rounded-full ${review.color} flex items-center justify-center text-white font-bold text-xl flex-shrink-0`}>
+                      {review.initials}
+                    </div>
                     <div>
                       <div className="font-semibold text-foreground">{review.name}</div>
                       <div className="text-sm text-muted-foreground">{review.role}</div>
