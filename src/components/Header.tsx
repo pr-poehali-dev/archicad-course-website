@@ -53,40 +53,40 @@ const Header = ({ onCTAClick }: HeaderProps) => {
               <Icon name="Menu" size={24} />
             </Button>
           </SheetTrigger>
-          <SheetContent side="right" className="w-[180px] pt-3 px-3 pb-24 min-h-[320px]">
-            <nav className="flex flex-col gap-0 mt-0 animate-in fade-in slide-in-from-right-5 duration-300">
+          <SheetContent side="right" className="w-[180px] pt-3 px-3 pb-3 min-h-[320px]">
+            <nav className="flex flex-col gap-4 mt-0 animate-in fade-in slide-in-from-right-5 duration-300">
               <a 
                 href="#about" 
                 onClick={() => handleNavClick('#about')}
-                className="text-xs hover:text-primary transition-all py-1 leading-tight"
+                className="text-sm hover:text-primary transition-all py-2"
               >
                 О курсе
               </a>
               <a 
                 href="#program" 
                 onClick={() => handleNavClick('#program')}
-                className="text-xs hover:text-primary transition-all py-1 leading-tight"
+                className="text-sm hover:text-primary transition-all py-2"
               >
                 Программа
               </a>
               <a 
                 href="#portfolio" 
                 onClick={() => handleNavClick('#portfolio')}
-                className="text-xs hover:text-primary transition-all py-1 leading-tight"
+                className="text-sm hover:text-primary transition-all py-2"
               >
                 Работы
               </a>
               <a 
                 href="#reviews" 
                 onClick={() => handleNavClick('#reviews')}
-                className="text-xs hover:text-primary transition-all py-1 leading-tight"
+                className="text-sm hover:text-primary transition-all py-2"
               >
                 Отзывы
               </a>
               <a 
                 href="#contact" 
                 onClick={() => handleNavClick('#contact')}
-                className="text-xs hover:text-primary transition-all py-1 leading-tight"
+                className="text-sm hover:text-primary transition-all py-2"
               >
                 Контакты
               </a>
@@ -98,7 +98,7 @@ const Header = ({ onCTAClick }: HeaderProps) => {
                   setIsOpen(false);
                   onCTAClick();
                 }} 
-                className="bg-primary hover:bg-primary/90 mt-1.5 w-full text-[10px] py-1 h-6"
+                className="bg-primary hover:bg-primary/90 mt-4 w-full text-sm py-2.5 h-10"
               >
                 Записаться
               </Button>
