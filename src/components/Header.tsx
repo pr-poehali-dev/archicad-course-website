@@ -54,39 +54,39 @@ const Header = ({ onCTAClick }: HeaderProps) => {
             </Button>
           </SheetTrigger>
           <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-            <nav className="flex flex-col gap-6 mt-8">
+            <nav className="flex flex-col gap-6 mt-8 animate-in fade-in slide-in-from-right-5 duration-300">
               <a 
                 href="#about" 
                 onClick={() => handleNavClick('#about')}
-                className="text-lg font-medium hover:text-primary transition"
+                className="text-lg font-medium hover:text-primary transition-all hover:translate-x-2"
               >
                 О курсе
               </a>
               <a 
                 href="#program" 
                 onClick={() => handleNavClick('#program')}
-                className="text-lg font-medium hover:text-primary transition"
+                className="text-lg font-medium hover:text-primary transition-all hover:translate-x-2"
               >
                 Программа
               </a>
               <a 
                 href="#portfolio" 
                 onClick={() => handleNavClick('#portfolio')}
-                className="text-lg font-medium hover:text-primary transition"
+                className="text-lg font-medium hover:text-primary transition-all hover:translate-x-2"
               >
                 Работы
               </a>
               <a 
                 href="#reviews" 
                 onClick={() => handleNavClick('#reviews')}
-                className="text-lg font-medium hover:text-primary transition"
+                className="text-lg font-medium hover:text-primary transition-all hover:translate-x-2"
               >
                 Отзывы
               </a>
               <a 
                 href="#contact" 
                 onClick={() => handleNavClick('#contact')}
-                className="text-lg font-medium hover:text-primary transition"
+                className="text-lg font-medium hover:text-primary transition-all hover:translate-x-2"
               >
                 Контакты
               </a>
