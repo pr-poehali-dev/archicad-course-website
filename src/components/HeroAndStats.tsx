@@ -28,13 +28,14 @@ const HeroAndStats = ({ onCTAClick }: HeroAndStatsProps) => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-              <Button onClick={onCTAClick} size="lg" className="bg-primary hover:bg-primary/90 text-base sm:text-lg px-6 sm:px-8">
+              <Button onClick={onCTAClick} size="lg" className="bg-primary hover:bg-primary/90 text-base sm:text-lg px-6 sm:px-8 animate-pulse-subtle">
                 Начать обучение
               </Button>
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="border-2 text-base sm:text-lg px-6 sm:px-8"
+                className="border-2 text-base sm:text-lg px-6 sm:px-8 animate-pulse-subtle"
+                style={{ animationDelay: '0.5s' }}
                 onClick={() => {
                   const element = document.getElementById('about');
                   if (element) {
