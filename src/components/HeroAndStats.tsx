@@ -22,7 +22,7 @@ const HeroAndStats = ({ onCTAClick }: HeroAndStatsProps) => {
               за <span className="text-accent">2-3 месяца</span>
             </h1>
             
-            <p className="text-base sm:text-xl text-gray-600 mx-auto">
+            <p className="text-base sm:text-xl text-gray-600 max-w-2xl mx-auto">
               Практический курс 3D визуализации интерьеров. 15 уроков, доступ навсегда. 
               Начните зарабатывать на своих навыках уже через 3 месяца.
             </p>
