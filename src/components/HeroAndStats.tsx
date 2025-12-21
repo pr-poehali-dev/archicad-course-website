@@ -17,7 +17,7 @@ const HeroAndStats = ({ onCTAClick }: HeroAndStatsProps) => {
               🏆 Профессиональное обучение с 2008 года
             </div>
             
-            <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold leading-tight animate-fade-in-up">
+            <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold leading-tight animate-fade-in-up tracking-wide">
               Освойте <span className="text-primary">ArchiCAD</span><br />
               за <span className="text-accent">2-3 месяца</span>
             </h1>
