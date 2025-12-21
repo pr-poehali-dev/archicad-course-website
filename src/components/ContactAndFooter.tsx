@@ -77,7 +77,7 @@ const ContactAndFooter = () => {
                       className="h-12"
                     />
                   </div>
-                  <Button type="submit" size="lg" className="w-full bg-primary hover:bg-primary/90">
+                  <Button type="submit" size="lg" className="w-full bg-primary hover:bg-primary/90 animate-pulse-subtle">
                     Отправить заявку
                     <Icon name="Send" className="ml-2" size={18} />
                   </Button>
@@ -99,7 +99,7 @@ const ContactAndFooter = () => {
           </p>
           <Button 
             size="lg" 
-            className="bg-primary hover:bg-primary/90 text-lg px-8"
+            className="bg-primary hover:bg-primary/90 text-lg px-8 animate-pulse-subtle"
             onClick={() => window.open('https://ihclick.ru/?idp=314945&link=/catalog/', '_blank')}
           >
             <Icon name="BookOpen" className="mr-2" size={20} />

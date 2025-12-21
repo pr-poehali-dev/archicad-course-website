@@ -20,7 +20,7 @@ const Header = ({ onCTAClick }: HeaderProps) => {
           <a href="#contact" className="hover:text-primary transition">Контакты</a>
         </nav>
 
-        <Button onClick={onCTAClick} className="bg-primary hover:bg-primary/90">
+        <Button onClick={onCTAClick} className="bg-primary hover:bg-primary/90 animate-pulse-subtle">
           Записаться на курс
         </Button>
       </div>
