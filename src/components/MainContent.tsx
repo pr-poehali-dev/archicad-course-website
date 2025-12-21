@@ -316,7 +316,7 @@ const MainContent = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-slate-200">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-4xl font-bold text-center mb-12">Частые вопросы</h2>
