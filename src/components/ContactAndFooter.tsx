@@ -28,7 +28,7 @@ const ContactAndFooter = () => {
   return (
     <>
       <section id="contact" className="py-20 bg-white">
-        <div className="container mx-auto px-4 bg-zinc-100">
+        <div className="container mx-auto px-4 bg-zinc-100 py-[45px]">
           <div className="max-w-2xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4">
