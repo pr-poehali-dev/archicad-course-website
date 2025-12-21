@@ -54,7 +54,7 @@ const Header = ({ onCTAClick }: HeaderProps) => {
             </Button>
           </SheetTrigger>
           <SheetContent side="right" className="w-[180px] pt-3 px-3 pb-3 min-h-[320px]">
-            <nav className="flex flex-col gap-4 animate-in fade-in slide-in-from-right-5 duration-300 rounded-0 px-[5px] py-[5px] mx-[5px] my-[5px]">
+            <nav className="flex flex-col gap-4 animate-in fade-in slide-in-from-right-5 duration-300 rounded-0 px-[5px] py-[5px] my-[5px] mx-[15px]">
               <a 
                 href="#about" 
                 onClick={() => handleNavClick('#about')}
