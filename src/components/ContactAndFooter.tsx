@@ -17,6 +17,10 @@ const ContactAndFooter = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
+    if (typeof window.ym !== 'undefined') {
+      window.ym(105952933, 'reachGoal', 'submit_application');
+    }
+    
     toast({
       title: "Заявка отправлена!",
       description: "Мы свяжемся с вами в течение 24 часов.",
@@ -100,7 +104,12 @@ const ContactAndFooter = () => {
           <Button 
             size="lg" 
             className="bg-primary hover:bg-primary/90 text-lg px-8 animate-pulse-subtle"
-            onClick={() => window.open('https://ihclick.ru/?idp=314945&link=/catalog/', '_blank')}
+            onClick={() => {
+              if (typeof window.ym !== 'undefined') {
+                window.ym(105952933, 'reachGoal', 'view_all_courses');
+              }
+              window.open('https://ihclick.ru/?idp=314945&link=/catalog/', '_blank');
+            }}
           >
             <Icon name="BookOpen" className="mr-2" size={20} />
             Посмотреть все курсы

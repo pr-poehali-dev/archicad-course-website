@@ -5,6 +5,9 @@ import ContactAndFooter from '@/components/ContactAndFooter';
 
 const Index = () => {
   const handleCTAClick = () => {
+    if (typeof window.ym !== 'undefined') {
+      window.ym(105952933, 'reachGoal', 'start_learning');
+    }
     window.open('https://ihclick.ru/?p=272195&o=272212&idp=314945&erid=2VtzqvHfAQk', '_blank');
   };
 

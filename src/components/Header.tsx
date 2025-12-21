@@ -20,7 +20,15 @@ const Header = ({ onCTAClick }: HeaderProps) => {
           <a href="#contact" className="hover:text-primary transition">Контакты</a>
         </nav>
 
-        <Button onClick={onCTAClick} className="bg-primary hover:bg-primary/90 animate-pulse-subtle">
+        <Button 
+          onClick={() => {
+            if (typeof window.ym !== 'undefined') {
+              window.ym(105952933, 'reachGoal', 'enroll_course');
+            }
+            onCTAClick();
+          }} 
+          className="bg-primary hover:bg-primary/90 animate-pulse-subtle"
+        >
           Записаться на курс
         </Button>
       </div>
