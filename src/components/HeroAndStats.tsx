@@ -35,7 +35,12 @@ const HeroAndStats = ({ onCTAClick }: HeroAndStatsProps) => {
                 variant="outline" 
                 size="lg" 
                 className="border-2 text-base sm:text-lg px-6 sm:px-8"
-                onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => {
+                  const element = document.getElementById('about');
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }
+                }}
               >
                 Подробнее о курсе
               </Button>
