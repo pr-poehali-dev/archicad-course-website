@@ -12,7 +12,7 @@ const HeroAndStats = ({ onCTAClick }: HeroAndStatsProps) => {
         <div className="absolute inset-0 bg-gradient-to-br from-white/85 via-white/75 to-white/85"></div>
         
         <div className="container mx-auto px-4 relative">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
+          <div className="w-full text-center space-y-8">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-semibold animate-fade-in">
               🏆 Профессиональное обучение с 2008 года
             </div>
@@ -22,7 +22,7 @@ const HeroAndStats = ({ onCTAClick }: HeroAndStatsProps) => {
               за <span className="text-accent">2-3 месяца</span>
             </h1>
             
-            <p className="text-base sm:text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-base sm:text-xl text-gray-600 mx-auto">
               Практический курс 3D визуализации интерьеров. 15 уроков, доступ навсегда. 
               Начните зарабатывать на своих навыках уже через 3 месяца.
             </p>
