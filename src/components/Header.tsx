@@ -7,7 +7,7 @@ interface HeaderProps {
 const Header = ({ onCTAClick }: HeaderProps) => {
   return (
     <header className="bg-white/60 backdrop-blur-md border-b border-gray-200/60 sticky top-0 z-50 shadow-sm">
-      <div className="container mx-auto px-4 py-4 flex items-center justify-between bg-[#00000017]">
+      <div className="container mx-auto px-4 py-4 flex items-center justify-between bg-transparent">
         <div className="font-bold text-2xl text-gray-800">
           <span className="text-primary">Archi</span><span className="text-gray-600">CAD</span>
         </div>
