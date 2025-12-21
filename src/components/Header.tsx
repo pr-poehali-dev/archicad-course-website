@@ -54,39 +54,39 @@ const Header = ({ onCTAClick }: HeaderProps) => {
             </Button>
           </SheetTrigger>
           <SheetContent side="right" className="w-[180px] p-3">
-            <nav className="flex flex-col gap-1 mt-1 animate-in fade-in slide-in-from-right-5 duration-300">
+            <nav className="flex flex-col gap-0 mt-0 animate-in fade-in slide-in-from-right-5 duration-300">
               <a 
                 href="#about" 
                 onClick={() => handleNavClick('#about')}
-                className="text-xs hover:text-primary transition-all py-0.5"
+                className="text-xs hover:text-primary transition-all py-1 leading-tight"
               >
                 О курсе
               </a>
               <a 
                 href="#program" 
                 onClick={() => handleNavClick('#program')}
-                className="text-xs hover:text-primary transition-all py-0.5"
+                className="text-xs hover:text-primary transition-all py-1 leading-tight"
               >
                 Программа
               </a>
               <a 
                 href="#portfolio" 
                 onClick={() => handleNavClick('#portfolio')}
-                className="text-xs hover:text-primary transition-all py-0.5"
+                className="text-xs hover:text-primary transition-all py-1 leading-tight"
               >
                 Работы
               </a>
               <a 
                 href="#reviews" 
                 onClick={() => handleNavClick('#reviews')}
-                className="text-xs hover:text-primary transition-all py-0.5"
+                className="text-xs hover:text-primary transition-all py-1 leading-tight"
               >
                 Отзывы
               </a>
               <a 
                 href="#contact" 
                 onClick={() => handleNavClick('#contact')}
-                className="text-xs hover:text-primary transition-all py-0.5"
+                className="text-xs hover:text-primary transition-all py-1 leading-tight"
               >
                 Контакты
               </a>
@@ -98,7 +98,7 @@ const Header = ({ onCTAClick }: HeaderProps) => {
                   setIsOpen(false);
                   onCTAClick();
                 }} 
-                className="bg-primary hover:bg-primary/90 mt-2 w-full text-[10px] py-1.5 h-7"
+                className="bg-primary hover:bg-primary/90 mt-1.5 w-full text-[10px] py-1 h-6"
               >
                 Записаться
               </Button>
