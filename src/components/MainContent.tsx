@@ -26,18 +26,23 @@ const MainContent = () => {
                 Практикующий 3D визуализатор интерьеров. Специалист по программам Archicad и 3D Max. 
                 Основатель онлайн школы «Учитель дома».
               </p>
+              <p className="text-base sm:text-lg text-gray-600">
+                В курсе рассмотрен основной функционал программы на примере создания чертежей раздела АР для коттеджа.
+              </p>
               <div className="space-y-3">
+                <h3 className="font-bold text-lg text-gray-900">Краткая программа курса «Archicad 23 для дизайнеров и архитекторов. Базовый уровень»:</h3>
                 {[
-                  'Более 15 лет опыта в 3D визуализации',
-                  'Создатель авторской методики обучения',
-                  'Более 500 выпускников по всему миру',
-                  'Индивидуальный подход к каждому студенту'
+                  '1. Знакомство с программой Archicad. Базовые инструменты.',
+                  '2. Планы этажей и трехмерные объекты.',
+                  '3. Назначение материалов, создание экспликации.',
+                  '4. Библиотеки программы. Виды чертежей.',
+                  '5. Создание сложных объектов. Оформление проекта.'
                 ].map((item, idx) => (
-                  <div key={idx} className="flex items-center gap-3">
-                    <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <div key={idx} className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-1">
                       <Icon name="Check" className="text-primary" size={14} />
                     </div>
-                    <span>{item}</span>
+                    <span className="text-gray-700">{item}</span>
                   </div>
                 ))}
               </div>

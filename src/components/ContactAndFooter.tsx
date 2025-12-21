@@ -77,7 +77,7 @@ const ContactAndFooter = () => {
                       className="h-12"
                     />
                   </div>
-                  <Button type="submit" size="lg" className="w-full bg-primary hover:bg-primary/90 animate-pulse-subtle">
+                  <Button type="submit" size="lg" className="w-full bg-primary hover:bg-primary/90">
                     Отправить заявку
                     <Icon name="Send" className="ml-2" size={18} />
                   </Button>
