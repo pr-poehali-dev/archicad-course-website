@@ -14,7 +14,7 @@ const HeroAndStats = ({ onCTAClick }: HeroAndStatsProps) => {
         <div className="container mx-auto px-4 relative">
           <div className="w-full text-center space-y-8">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-semibold animate-fade-in">
-              🏆 Профессиональное обучение с 2008 года
+              Профессиональное обучение с 2008 года
             </div>
             
             <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold leading-tight animate-fade-in-up tracking-wide">
