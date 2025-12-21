@@ -53,7 +53,7 @@ const Header = ({ onCTAClick }: HeaderProps) => {
               <Icon name="Menu" size={24} />
             </Button>
           </SheetTrigger>
-          <SheetContent side="right" className="w-[180px] p-3">
+          <SheetContent side="right" className="w-[180px] pt-8 px-3 pb-0">
             <nav className="flex flex-col gap-0 mt-0 animate-in fade-in slide-in-from-right-5 duration-300">
               <a 
                 href="#about" 
