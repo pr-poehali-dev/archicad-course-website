@@ -119,12 +119,12 @@ const MainContent = () => {
               { icon: 'FileCheck', title: 'Сертификат', desc: 'Официальный документ' },
               { icon: 'Rocket', title: 'Быстрый старт', desc: 'Проекты через 2 недели' }
             ].map((feature, idx) => (
-              <Card key={idx} className="hover:shadow-lg transition">
+              <Card key={idx} className="hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer group">
                 <CardContent className="p-6">
-                  <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
+                  <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent/20 group-hover:scale-110 transition-all duration-300">
                     <Icon name={feature.icon as any} className="text-accent" size={24} />
                   </div>
-                  <h3 className="font-bold text-lg mb-2">{feature.title}</h3>
+                  <h3 className="font-bold text-lg mb-2 group-hover:text-primary transition-colors">{feature.title}</h3>
                   <p className="text-gray-600 text-sm">{feature.desc}</p>
                 </CardContent>
               </Card>
@@ -153,18 +153,18 @@ const MainContent = () => {
               { num: '03', title: 'Визуализация', lessons: '4 урока', topics: ['Рендер', 'Постобработка', 'Презентация'] },
               { num: '04', title: 'Проекты', lessons: '3 урока', topics: ['Сложные проекты', 'Портфолио'] }
             ].map((module, idx) => (
-              <Card key={idx} className="hover:shadow-lg transition">
+              <Card key={idx} className="hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="text-4xl font-bold text-primary/20">{module.num}</div>
+                    <div className="text-4xl font-bold text-primary/20 group-hover:text-primary/40 group-hover:scale-110 transition-all duration-300">{module.num}</div>
                     <div className="flex-1">
                       <div className="flex items-center justify-between mb-2">
-                        <h3 className="text-xl font-bold">{module.title}</h3>
+                        <h3 className="text-xl font-bold group-hover:text-primary transition-colors">{module.title}</h3>
                         <span className="text-sm text-gray-500">{module.lessons}</span>
                       </div>
                       <div className="flex flex-wrap gap-2">
                         {module.topics.map((topic, i) => (
-                          <span key={i} className="text-sm bg-gray-100 px-3 py-1 rounded-full">
+                          <span key={i} className="text-sm bg-gray-100 px-3 py-1 rounded-full group-hover:bg-primary/10 transition-colors">
                             {topic}
                           </span>
                         ))}
@@ -222,22 +222,22 @@ const MainContent = () => {
                 photo: 'https://cdn.poehali.dev/projects/7710b90a-6ab5-4f28-96bc-4e8f387343b6/files/b97303af-d278-49d1-93e7-c21a79a9a5e8.jpg'
               }
             ].map((review, idx) => (
-              <Card key={idx} className="hover:shadow-lg transition">
+              <Card key={idx} className="hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer group">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <img 
                       src={review.photo} 
                       alt={review.name}
-                      className="w-12 h-12 rounded-full object-cover"
+                      className="w-12 h-12 rounded-full object-cover group-hover:scale-110 transition-transform duration-300"
                     />
                     <div>
-                      <div className="font-bold">{review.name}</div>
+                      <div className="font-bold group-hover:text-primary transition-colors">{review.name}</div>
                       <div className="text-sm text-gray-500">{review.role}</div>
                     </div>
                   </div>
                   <div className="flex gap-1 mb-3">
                     {[...Array(5)].map((_, i) => (
-                      <Icon key={i} name="Star" className="text-accent fill-accent" size={14} />
+                      <Icon key={i} name="Star" className="text-accent fill-accent group-hover:scale-110 transition-transform duration-300" size={14} />
                     ))}
                   </div>
                   <p className="text-sm text-gray-600">"{review.text}"</p>
@@ -279,16 +279,17 @@ const MainContent = () => {
                 author: 'Максим П.'
               }
             ].map((work, idx) => (
-              <Card key={idx} className="overflow-hidden group">
+              <Card key={idx} className="overflow-hidden group hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer">
                 <div className="relative h-64 overflow-hidden">
                   <img 
                     src={work.image} 
                     alt={work.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
                 <CardContent className="p-4">
-                  <h3 className="font-bold text-lg">{work.title}</h3>
+                  <h3 className="font-bold text-lg group-hover:text-primary transition-colors">{work.title}</h3>
                   <p className="text-sm text-gray-500">Автор: {work.author}</p>
                 </CardContent>
               </Card>
