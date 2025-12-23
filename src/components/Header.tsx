@@ -25,12 +25,12 @@ const Header = ({ onCTAClick }: HeaderProps) => {
           <span className="text-primary">Archi</span><span className="text-gray-600">CAD</span>
         </div>
 
-        <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-800">
-          <a href="#about" className="hover:text-primary transition">О курсе</a>
-          <a href="#program" className="hover:text-primary transition">Программа</a>
-          <a href="#portfolio" className="hover:text-primary transition">Работы</a>
-          <a href="#reviews" className="hover:text-primary transition">Отзывы</a>
-          <a href="#contact" className="hover:text-primary transition">Контакты</a>
+        <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-800">
+          <a href="#about" className="hover:text-primary transition whitespace-nowrap">О курсе</a>
+          <a href="#program" className="hover:text-primary transition whitespace-nowrap">Программа</a>
+          <a href="#portfolio" className="hover:text-primary transition whitespace-nowrap">Работы</a>
+          <a href="#reviews" className="hover:text-primary transition whitespace-nowrap">Отзывы</a>
+          <a href="#contact" className="hover:text-primary transition whitespace-nowrap">Контакты</a>
         </nav>
 
         <div className="hidden md:block">
