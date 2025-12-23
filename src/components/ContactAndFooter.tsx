@@ -1,96 +1,71 @@
-import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Card, CardContent } from '@/components/ui/card';
-import { useToast } from '@/hooks/use-toast';
 import Icon from '@/components/ui/icon';
 
 const ContactAndFooter = () => {
-  const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    email: '',
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
+  const handleCTAClick = () => {
     if (typeof window.ym !== 'undefined') {
-      window.ym(105952933, 'reachGoal', 'submit_application');
+      window.ym(105952933, 'reachGoal', 'start_learning_footer');
     }
     
-    toast({
-      title: "Заявка отправлена!",
-      description: "Мы свяжемся с вами в течение 24 часов.",
-    });
-
-    setFormData({ name: '', phone: '', email: '' });
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmSource = urlParams.get('utm_source') || '';
+    const utmMedium = urlParams.get('utm_medium') || '';
+    const utmCampaign = urlParams.get('utm_campaign') || '';
+    const utmContent = urlParams.get('utm_content') || '';
+    const utmTerm = urlParams.get('utm_term') || '';
+    
+    let refUrl = 'https://ihclick.ru/?p=272195&o=272212&idp=314945&erid=2VtzqvHfAQk';
+    
+    if (utmSource) refUrl += `&utm_source=${encodeURIComponent(utmSource)}`;
+    if (utmMedium) refUrl += `&utm_medium=${encodeURIComponent(utmMedium)}`;
+    if (utmCampaign) refUrl += `&utm_campaign=${encodeURIComponent(utmCampaign)}`;
+    if (utmContent) refUrl += `&utm_content=${encodeURIComponent(utmContent)}`;
+    if (utmTerm) refUrl += `&utm_term=${encodeURIComponent(utmTerm)}`;
+    
+    window.open(refUrl, '_blank');
   };
 
   return (
     <>
-      <section id="contact" className="py-20 bg-white">
-        <div className="container mx-auto bg-zinc-100 py-[45px] px-[181px]">
-          <div className="max-w-2xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4">
-                Записаться на курс
+      <section id="contact" className="py-20 bg-gradient-to-br from-primary/5 to-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="mb-8">
+              <Icon name="Rocket" size={64} className="mx-auto text-primary mb-6" />
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+                Готовы начать обучение?
               </h2>
-              <p className="text-base sm:text-lg text-gray-600">
-                Заполните форму и получите консультацию
+              <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                Присоединяйтесь к курсу ArchiCAD и начните создавать профессиональные проекты уже через 3 месяца
               </p>
             </div>
 
-            <Card className="shadow-xl">
-              <CardContent className="p-8">
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="space-y-2">
-                    <Label htmlFor="name">Ваше имя *</Label>
-                    <Input
-                      id="name"
-                      placeholder="Иван Иванов"
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      required
-                      className="h-12"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="phone">Телефон *</Label>
-                    <Input
-                      id="phone"
-                      type="tel"
-                      placeholder="+7 (999) 123-45-67"
-                      value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      required
-                      className="h-12"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="email">Email *</Label>
-                    <Input
-                      id="email"
-                      type="email"
-                      placeholder="ivan@example.com"
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      required
-                      className="h-12"
-                    />
-                  </div>
-                  <Button type="submit" size="lg" className="w-full bg-primary hover:bg-primary/90">
-                    Отправить заявку
-                    <Icon name="Send" className="ml-2" size={18} />
-                  </Button>
-                  <p className="text-xs text-gray-500 text-center">
-                    Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности
-                  </p>
-                </form>
-              </CardContent>
-            </Card>
+            <div className="grid md:grid-cols-3 gap-6 mb-12">
+              <div className="p-6 bg-white rounded-lg shadow-md">
+                <Icon name="Clock" size={40} className="mx-auto text-primary mb-4" />
+                <h3 className="font-bold text-lg mb-2">15 уроков</h3>
+                <p className="text-gray-600 text-sm">Структурированная программа обучения</p>
+              </div>
+              <div className="p-6 bg-white rounded-lg shadow-md">
+                <Icon name="Users" size={40} className="mx-auto text-primary mb-4" />
+                <h3 className="font-bold text-lg mb-2">500+ выпускников</h3>
+                <p className="text-gray-600 text-sm">Довольных студентов с 2008 года</p>
+              </div>
+              <div className="p-6 bg-white rounded-lg shadow-md">
+                <Icon name="Award" size={40} className="mx-auto text-primary mb-4" />
+                <h3 className="font-bold text-lg mb-2">Сертификат</h3>
+                <p className="text-gray-600 text-sm">После завершения курса</p>
+              </div>
+            </div>
+
+            <Button 
+              size="lg" 
+              className="bg-primary hover:bg-primary/90 text-lg px-12 py-6 h-auto animate-pulse-subtle"
+              onClick={handleCTAClick}
+            >
+              <Icon name="GraduationCap" className="mr-2" size={24} />
+              Начать обучение
+            </Button>
           </div>
         </div>
       </section>
