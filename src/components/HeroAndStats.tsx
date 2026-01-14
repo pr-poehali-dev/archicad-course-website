@@ -19,7 +19,7 @@ const HeroAndStats = ({ onCTAClick }: HeroAndStatsProps) => {
             
             <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold leading-tight animate-fade-in-up tracking-wide">
               Освойте <span className="text-primary">ArchiCAD</span><br />
-              за <span className="text-accent font-black">2-3 месяца</span>
+              за <span className="text-accent font-bold">2-3 месяца</span>
             </h1>
             
             <p className="text-base sm:text-xl text-gray-600 max-w-2xl mx-auto">
