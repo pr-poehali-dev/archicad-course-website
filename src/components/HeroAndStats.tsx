@@ -37,7 +37,7 @@ const HeroAndStats = ({ onCTAClick }: HeroAndStatsProps) => {
                 className="border-2 text-base sm:text-lg px-6 sm:px-8 animate-pulse-subtle"
                 style={{ animationDelay: '0.5s' }}
                 onClick={() => {
-                  const element = document.getElementById('about');
+                  const element = document.getElementById('program');
                   if (element) {
                     element.scrollIntoView({ behavior: 'smooth', block: 'start' });
                   }
