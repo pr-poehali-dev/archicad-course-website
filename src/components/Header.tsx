@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from '@/components/ui/sheet';
+import { VisuallyHidden } from '@/components/ui/visually-hidden';
 import Icon from '@/components/ui/icon';
 import { useState } from 'react';
 
@@ -54,6 +55,10 @@ const Header = ({ onCTAClick }: HeaderProps) => {
             </Button>
           </SheetTrigger>
           <SheetContent side="right" className="w-[180px] pt-3 px-3 pb-3 min-h-[320px]">
+            <VisuallyHidden>
+              <SheetTitle>Навигация</SheetTitle>
+              <SheetDescription>Меню навигации по разделам сайта</SheetDescription>
+            </VisuallyHidden>
             <nav className="flex flex-col gap-4 animate-in fade-in slide-in-from-right-5 duration-300 rounded-0 px-[5px] py-[5px] my-[5px] mx-[15px]">
               <a 
                 href="#about" 
