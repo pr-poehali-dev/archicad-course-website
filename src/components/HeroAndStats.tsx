@@ -13,7 +13,7 @@ const HeroAndStats = ({ onCTAClick }: HeroAndStatsProps) => {
         
         <div className="container mx-auto px-4 relative">
           <div className="w-full text-center space-y-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-semibold animate-fade-in">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-primary text-sm font-semibold animate-fade-in bg-lime-50">
               Профессиональное обучение с 2008 года
             </div>
             
