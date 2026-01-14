@@ -259,23 +259,23 @@ const MainContent = () => {
           <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
             {[
               {
-                image: 'https://cdn.poehali.dev/projects/7710b90a-6ab5-4f28-96bc-4e8f387343b6/files/c348d25f-3457-43d7-96e4-ebed29457425.jpg',
-                title: 'Современная гостиная',
+                image: 'https://cdn.poehali.dev/projects/7710b90a-6ab5-4f28-96bc-4e8f387343b6/files/60c3ac1a-54c3-4767-94c4-428e9c5e9dbb.jpg',
+                title: 'Современный коттедж',
                 author: 'Александра М.'
               },
               {
-                image: 'https://cdn.poehali.dev/projects/7710b90a-6ab5-4f28-96bc-4e8f387343b6/files/a0f2363e-56f2-4999-9039-4873086f087c.jpg',
-                title: 'Кухня минимализм',
+                image: 'https://cdn.poehali.dev/projects/7710b90a-6ab5-4f28-96bc-4e8f387343b6/files/3a0db252-736f-4c0b-b36d-de47cd58b882.jpg',
+                title: 'Загородный дом',
                 author: 'Дмитрий К.'
               },
               {
-                image: 'https://cdn.poehali.dev/projects/7710b90a-6ab5-4f28-96bc-4e8f387343b6/files/00a0a095-81c5-423b-93bc-3416d121a90f.jpg',
-                title: 'Спальня',
+                image: 'https://cdn.poehali.dev/projects/7710b90a-6ab5-4f28-96bc-4e8f387343b6/files/4dde6b1d-7484-4759-8917-b11d0737a735.jpg',
+                title: 'Деревянный коттедж',
                 author: 'Елена В.'
               },
               {
-                image: 'https://cdn.poehali.dev/projects/7710b90a-6ab5-4f28-96bc-4e8f387343b6/files/afeedc27-8145-4486-8f4d-30f84e23e4ac.jpg',
-                title: 'Офис',
+                image: 'https://cdn.poehali.dev/projects/7710b90a-6ab5-4f28-96bc-4e8f387343b6/files/4fce0f73-9b7b-41dd-8652-9e95c810f339.jpg',
+                title: 'Архитектурный проект',
                 author: 'Максим П.'
               }
             ].map((work, idx) => (
