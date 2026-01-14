@@ -52,7 +52,118 @@ const MainContent = () => {
         </div>
       </section>
 
-      <section id="curriculum" className="relative py-20 overflow-hidden">
+      <section id="pricing" className="py-20 bg-gradient-to-br from-primary/5 via-accent/5 to-primary/5">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              Курс «Archicad для дизайнеров и архитекторов»
+            </h2>
+            <p className="text-lg text-gray-600">
+              Начните карьеру в 3D визуализации уже сегодня
+            </p>
+          </div>
+
+          <Card className="max-w-2xl mx-auto hover:shadow-2xl transition-all duration-300 border-2 border-primary/20">
+            <CardContent className="p-8">
+              <div className="text-center mb-6">
+                <div className="inline-block px-4 py-2 bg-accent/10 rounded-full text-accent text-sm font-semibold mb-4">
+                  Полный доступ
+                </div>
+                <div className="text-5xl font-bold text-primary mb-2">15 990 ₽</div>
+                <p className="text-gray-600">Единоразовая оплата</p>
+              </div>
+
+              <div className="space-y-4 mb-8">
+                {[
+                  '15 видеоуроков в Full HD качестве',
+                  'Доступ к курсу на 6 месяцев',
+                  'Все исходные файлы проектов',
+                  'Сертификат о прохождении курса',
+                  'Поддержка куратора в чате',
+                  'Проверка домашних заданий'
+                ].map((feature, idx) => (
+                  <div key={idx} className="flex items-center gap-3">
+                    <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <Icon name="Check" className="text-primary" size={16} />
+                    </div>
+                    <span className="text-gray-700">{feature}</span>
+                  </div>
+                ))}
+              </div>
+
+              <Button 
+                className="w-full text-lg py-6 bg-gradient-to-r from-primary to-accent hover:shadow-xl hover:scale-105 transition-all duration-300"
+                onClick={() => {
+                  const paymentSection = document.getElementById('payment');
+                  paymentSection?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
+                Записаться на курс
+              </Button>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      <section id="benefits" className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              Преимущества курса
+            </h2>
+            <p className="text-lg text-gray-600">
+              Почему студенты выбирают наш курс
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {[
+              {
+                icon: 'GraduationCap',
+                title: 'Практический подход',
+                description: 'Создаете реальные проекты с первого урока. Все знания сразу применяете на практике.'
+              },
+              {
+                icon: 'Users',
+                title: 'Поддержка 24/7',
+                description: 'Куратор ответит на вопросы в течение 2 часов. Общий чат с единомышленниками.'
+              },
+              {
+                icon: 'Award',
+                title: 'Сертификат',
+                description: 'После успешного завершения получите сертификат для портфолио и резюме.'
+              },
+              {
+                icon: 'Video',
+                title: 'HD качество',
+                description: 'Все уроки в Full HD качестве. Четкая картинка и профессиональный звук.'
+              },
+              {
+                icon: 'Clock',
+                title: 'Гибкий график',
+                description: 'Учитесь в удобное время. Доступ к урокам 24/7 на протяжении 6 месяцев.'
+              },
+              {
+                icon: 'TrendingUp',
+                title: 'От простого к сложному',
+                description: 'Структурированная программа от базовых инструментов до сложных проектов.'
+              }
+            ].map((benefit, idx) => (
+              <Card key={idx} className="text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group cursor-pointer">
+                <CardContent className="p-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <Icon name={benefit.icon} className="text-white" size={32} />
+                  </div>
+                  <h3 className="font-bold text-xl mb-2 group-hover:text-primary transition-colors">{benefit.title}</h3>
+                  <p className="text-gray-600">{benefit.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="program" className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center" style={{backgroundImage: 'url(https://cdn.poehali.dev/projects/7710b90a-6ab5-4f28-96bc-4e8f387343b6/files/f3a29e0a-731d-43b6-9c24-0db014135783.jpg)'}}></div>
         <div className="absolute inset-0 bg-white/50"></div>
         <div className="container mx-auto px-4 relative">
@@ -174,228 +285,46 @@ const MainContent = () => {
               },
               {
                 name: 'Елена В.',
-                role: 'Фрилансер',
-                text: 'Получила все навыки для работы. Теперь зарабатываю на визуализации удаленно.',
-                photo: 'https://cdn.poehali.dev/projects/7710b90a-6ab5-4f28-96bc-4e8f387343b6/files/04250176-fb7e-4889-80e1-912da9662f4c.jpg'
+                role: 'Дизайнер интерьера',
+                text: 'Благодаря курсу увеличила свой доход в 2 раза. Теперь могу создавать проекты любой сложности.',
+                photo: 'https://cdn.poehali.dev/projects/7710b90a-6ab5-4f28-96bc-4e8f387343b6/files/55ab1e43-0afa-4d8f-bc37-d5e47e33eb64.jpg'
               },
               {
                 name: 'Максим П.',
-                role: 'Студент',
-                text: 'Программа отлично структурирована. Каждый урок - новые знания и практика.',
-                photo: 'https://cdn.poehali.dev/projects/7710b90a-6ab5-4f28-96bc-4e8f387343b6/files/5a6a2565-6c8b-41a1-98b7-c6b3735648bc.jpg'
+                role: 'Фрилансер',
+                text: 'Получил первый заказ еще до окончания курса. Материал структурирован идеально.',
+                photo: 'https://cdn.poehali.dev/projects/7710b90a-6ab5-4f28-96bc-4e8f387343b6/files/eb4a3c1f-3e2f-409f-a18f-91df99839bfb.jpg'
               },
               {
                 name: 'Ольга С.',
-                role: 'Дизайнер',
-                text: 'Наконец-то освоила 3D! Теперь показываю клиентам реалистичные проекты.',
-                photo: 'https://cdn.poehali.dev/projects/7710b90a-6ab5-4f28-96bc-4e8f387343b6/files/b97303af-d278-49d1-93e7-c21a79a9a5e8.jpg'
+                role: 'Архитектор',
+                text: 'Лучшее вложение в свое образование. Курс окупился за первый месяц работы.',
+                photo: 'https://cdn.poehali.dev/projects/7710b90a-6ab5-4f28-96bc-4e8f387343b6/files/0cd4555f-e07e-44e1-857f-da57e3b9a6d6.jpg'
+              },
+              {
+                name: 'Игорь Н.',
+                role: '3D визуализатор',
+                text: 'Профессиональный подход и качественная подача материала. Рекомендую всем начинающим.',
+                photo: 'https://cdn.poehali.dev/projects/7710b90a-6ab5-4f28-96bc-4e8f387343b6/files/d67f2737-b4d9-425a-be30-c36e1e7e3a56.jpg'
               }
             ].map((review, idx) => (
               <Card key={idx} className="hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer group">
                 <CardContent className="p-6">
-                  <div className="flex items-center gap-3 mb-4">
+                  <div className="flex items-center gap-4 mb-4">
                     <img 
-                      src={review.photo} 
+                      src={review.photo}
                       alt={review.name}
-                      className="w-12 h-12 rounded-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      className="w-16 h-16 rounded-full object-cover group-hover:scale-110 transition-transform duration-300"
                     />
                     <div>
-                      <div className="font-bold group-hover:text-primary transition-colors">{review.name}</div>
-                      <div className="text-sm text-gray-500">{review.role}</div>
+                      <h3 className="font-bold group-hover:text-primary transition-colors">{review.name}</h3>
+                      <p className="text-sm text-gray-600">{review.role}</p>
                     </div>
                   </div>
-                  <div className="flex gap-1 mb-3">
-                    {[...Array(5)].map((_, i) => (
-                      <Icon key={i} name="Star" className="text-accent fill-accent group-hover:scale-110 transition-transform duration-300" size={14} />
-                    ))}
-                  </div>
-                  <p className="text-sm text-gray-600">"{review.text}"</p>
+                  <p className="text-gray-700">{review.text}</p>
                 </CardContent>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="pricing" className="py-20 bg-gradient-to-br from-gray-700 to-gray-800 text-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Курс «Archicad для дизайнеров и архитекторов»
-            </h2>
-            <p className="text-base sm:text-xl text-white/90">
-              15 уроков • 2-3 месяца • Доступ навсегда
-            </p>
-          </div>
-
-          <div className="bg-white text-gray-900 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12">
-              <div className="text-center md:text-left">
-                <div className="text-4xl sm:text-6xl font-bold text-primary mb-2">12 900 ₽</div>
-                <div className="text-lg text-gray-600 mb-6">Полная стоимость</div>
-                <div className="bg-accent/10 p-4 rounded-lg">
-                  <div className="flex items-center gap-3">
-                    <Icon name="CreditCard" className="text-accent" size={24} />
-                    <div>
-                      <div className="font-semibold">Оплата Долями</div>
-                      <div className="text-sm text-gray-600">от 3 225 ₽ × 4 платежа</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="space-y-3">
-                <h3 className="font-bold text-lg mb-4">Что входит в курс:</h3>
-                {[
-                  '15 практических уроков',
-                  'Все материалы для изучения',
-                  'Доступ к курсу навсегда',
-                  'Поддержка преподавателя',
-                  'Сертификат после обучения',
-                  'Возможность рассрочки'
-                ].map((item, idx) => (
-                  <div key={idx} className="flex items-center gap-3">
-                    <Icon name="Check" className="text-accent" size={18} />
-                    <span className="text-sm">{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="text-center mt-8">
-              <Button 
-                size="lg" 
-                className="bg-primary hover:bg-primary/90 text-lg px-12 py-6 h-auto animate-pulse-subtle"
-                onClick={() => {
-                  if (typeof window.ym !== 'undefined') {
-                    window.ym(105952933, 'reachGoal', 'enroll_course_pricing');
-                  }
-                  const urlParams = new URLSearchParams(window.location.search);
-                  const utmSource = urlParams.get('utm_source') || '';
-                  const utmMedium = urlParams.get('utm_medium') || '';
-                  const utmCampaign = urlParams.get('utm_campaign') || '';
-                  const utmContent = urlParams.get('utm_content') || '';
-                  const utmTerm = urlParams.get('utm_term') || '';
-                  let refUrl = 'https://ihclick.ru/?p=272195&o=272212&idp=314945&erid=2VtzqvHfAQk';
-                  if (utmSource) refUrl += `&utm_source=${encodeURIComponent(utmSource)}`;
-                  if (utmMedium) refUrl += `&utm_medium=${encodeURIComponent(utmMedium)}`;
-                  if (utmCampaign) refUrl += `&utm_campaign=${encodeURIComponent(utmCampaign)}`;
-                  if (utmContent) refUrl += `&utm_content=${encodeURIComponent(utmContent)}`;
-                  if (utmTerm) refUrl += `&utm_term=${encodeURIComponent(utmTerm)}`;
-                  window.open(refUrl, '_blank');
-                }}
-              >
-                Начать обучение
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="benefits" className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Преимущества курса
-            </h2>
-            <p className="text-lg text-gray-600">
-              Всё для профессионального роста
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {[
-              { icon: 'Laptop', title: 'Практика', desc: 'Реальные проекты с первого урока' },
-              { icon: 'Headphones', title: 'Поддержка 24/7', desc: 'Ответы на вопросы в течение суток' },
-              { icon: 'Briefcase', title: 'Трудоустройство', desc: 'Помощь в поиске работы' },
-              { icon: 'Video', title: 'Видеоуроки', desc: 'Доступ навсегда' },
-              { icon: 'FileCheck', title: 'Сертификат', desc: 'Официальный документ' },
-              { icon: 'Rocket', title: 'Быстрый старт', desc: 'Проекты через 2 недели' }
-            ].map((feature, idx) => (
-              <Card key={idx} className="hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer group">
-                <CardContent className="p-6">
-                  <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent/20 group-hover:scale-110 transition-all duration-300">
-                    <Icon name={feature.icon as any} className="text-accent" size={24} />
-                  </div>
-                  <h3 className="font-bold text-lg mb-2 group-hover:text-primary transition-colors">{feature.title}</h3>
-                  <p className="text-gray-600 text-sm">{feature.desc}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-          <div className="text-center mt-12">
-            <Button 
-              size="lg" 
-              className="bg-primary hover:bg-primary/90 text-lg px-12 py-6 h-auto animate-pulse-subtle"
-              onClick={() => {
-                if (typeof window.ym !== 'undefined') {
-                  window.ym(105952933, 'reachGoal', 'enroll_course_benefits');
-                }
-                const urlParams = new URLSearchParams(window.location.search);
-                const utmSource = urlParams.get('utm_source') || '';
-                const utmMedium = urlParams.get('utm_medium') || '';
-                const utmCampaign = urlParams.get('utm_campaign') || '';
-                const utmContent = urlParams.get('utm_content') || '';
-                const utmTerm = urlParams.get('utm_term') || '';
-                let refUrl = 'https://ihclick.ru/?p=272195&o=272212&idp=314945&erid=2VtzqvHfAQk';
-                if (utmSource) refUrl += `&utm_source=${encodeURIComponent(utmSource)}`;
-                if (utmMedium) refUrl += `&utm_medium=${encodeURIComponent(utmMedium)}`;
-                if (utmCampaign) refUrl += `&utm_campaign=${encodeURIComponent(utmCampaign)}`;
-                if (utmContent) refUrl += `&utm_content=${encodeURIComponent(utmContent)}`;
-                if (utmTerm) refUrl += `&utm_term=${encodeURIComponent(utmTerm)}`;
-                window.open(refUrl, '_blank');
-              }}
-            >
-              Начать обучение
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-gradient-to-br from-gray-600 to-gray-700 text-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Карьерные возможности
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            {[
-              { icon: 'Briefcase', title: 'Работа в студии' },
-              { icon: 'Home', title: 'Фриланс' },
-              { icon: 'TrendingUp', title: 'От 150 000 ₽' },
-              { icon: 'Users', title: 'Свои проекты' }
-            ].map((item, idx) => (
-              <div key={idx} className="bg-white/10 backdrop-blur p-6 rounded-xl text-center">
-                <Icon name={item.icon as any} className="mx-auto mb-3" size={32} />
-                <h3 className="font-bold">{item.title}</h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-slate-200">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-12">Частые вопросы</h2>
-            <div className="space-y-4">
-              {[
-                { q: 'Нужен ли опыт?', a: 'Нет, курс для новичков.' },
-                { q: 'Какой компьютер нужен?', a: 'Intel Core i5, 8 ГБ RAM, видеокарта 2 ГБ.' },
-                { q: 'Сколько времени в день?', a: '2-3 часа в день, 2-3 месяца обучения.' },
-                { q: 'Помощь в трудоустройстве?', a: 'Да, помогаем с портфолио и резюме.' },
-                { q: 'Какой документ?', a: 'Сертификат о прохождении курса.' },
-                { q: 'Рассрочка?', a: 'Да, через сервис Долями.' }
-              ].map((faq, idx) => (
-                <Card key={idx}>
-                  <CardContent className="p-6">
-                    <h3 className="font-bold mb-2">{faq.q}</h3>
-                    <p className="text-gray-600 text-sm">{faq.a}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
           </div>
         </div>
       </section>
