@@ -1,4 +1,5 @@
 import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
 
 const MainContent = () => {
@@ -95,6 +96,32 @@ const MainContent = () => {
                 ))}
               </div>
             </div>
+            <div className="text-center mt-8">
+              <Button 
+                size="lg" 
+                className="bg-primary hover:bg-primary/90 text-lg px-12 py-6 h-auto animate-pulse-subtle"
+                onClick={() => {
+                  if (typeof window.ym !== 'undefined') {
+                    window.ym(105952933, 'reachGoal', 'enroll_course_pricing');
+                  }
+                  const urlParams = new URLSearchParams(window.location.search);
+                  const utmSource = urlParams.get('utm_source') || '';
+                  const utmMedium = urlParams.get('utm_medium') || '';
+                  const utmCampaign = urlParams.get('utm_campaign') || '';
+                  const utmContent = urlParams.get('utm_content') || '';
+                  const utmTerm = urlParams.get('utm_term') || '';
+                  let refUrl = 'https://ihclick.ru/?p=272195&o=272212&idp=314945&erid=2VtzqvHfAQk';
+                  if (utmSource) refUrl += `&utm_source=${encodeURIComponent(utmSource)}`;
+                  if (utmMedium) refUrl += `&utm_medium=${encodeURIComponent(utmMedium)}`;
+                  if (utmCampaign) refUrl += `&utm_campaign=${encodeURIComponent(utmCampaign)}`;
+                  if (utmContent) refUrl += `&utm_content=${encodeURIComponent(utmContent)}`;
+                  if (utmTerm) refUrl += `&utm_term=${encodeURIComponent(utmTerm)}`;
+                  window.open(refUrl, '_blank');
+                }}
+              >
+                Начать обучение
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -129,6 +156,32 @@ const MainContent = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+          <div className="text-center mt-12">
+            <Button 
+              size="lg" 
+              className="bg-primary hover:bg-primary/90 text-lg px-12 py-6 h-auto animate-pulse-subtle"
+              onClick={() => {
+                if (typeof window.ym !== 'undefined') {
+                  window.ym(105952933, 'reachGoal', 'enroll_course_benefits');
+                }
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmSource = urlParams.get('utm_source') || '';
+                const utmMedium = urlParams.get('utm_medium') || '';
+                const utmCampaign = urlParams.get('utm_campaign') || '';
+                const utmContent = urlParams.get('utm_content') || '';
+                const utmTerm = urlParams.get('utm_term') || '';
+                let refUrl = 'https://ihclick.ru/?p=272195&o=272212&idp=314945&erid=2VtzqvHfAQk';
+                if (utmSource) refUrl += `&utm_source=${encodeURIComponent(utmSource)}`;
+                if (utmMedium) refUrl += `&utm_medium=${encodeURIComponent(utmMedium)}`;
+                if (utmCampaign) refUrl += `&utm_campaign=${encodeURIComponent(utmCampaign)}`;
+                if (utmContent) refUrl += `&utm_content=${encodeURIComponent(utmContent)}`;
+                if (utmTerm) refUrl += `&utm_term=${encodeURIComponent(utmTerm)}`;
+                window.open(refUrl, '_blank');
+              }}
+            >
+              Начать обучение
+            </Button>
           </div>
         </div>
       </section>
