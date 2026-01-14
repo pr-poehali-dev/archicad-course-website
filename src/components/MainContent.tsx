@@ -293,56 +293,43 @@ const MainContent = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {[
               {
-                name: 'Александра М.',
-                role: '3D дизайнер',
-                text: 'Курс превзошел все ожидания! За 3 месяца освоила программу и работаю над коммерческими проектами.',
+                name: 'Анна Л.',
+                role: 'Студент',
+                text: 'Отличный курс! Всё понятно объяснено, много практики.',
                 photo: 'https://cdn.poehali.dev/projects/7710b90a-6ab5-4f28-96bc-4e8f387343b6/files/342b868c-b375-4960-809f-44c672e6ff53.jpg'
               },
               {
-                name: 'Дмитрий К.',
-                role: 'Архитектор',
-                text: 'Отличная структура и поддержка. Ирина объясняет сложные вещи простым языком.',
-                photo: 'https://cdn.poehali.dev/projects/7710b90a-6ab5-4f28-96bc-4e8f387343b6/files/8828c92f-d4c0-4d74-8f56-c4b461a2006c.jpg'
-              },
-              {
-                name: 'Елена В.',
-                role: 'Дизайнер интерьера',
-                text: 'Благодаря курсу увеличила свой доход в 2 раза. Теперь могу создавать проекты любой сложности.',
-                photo: 'https://cdn.poehali.dev/projects/7710b90a-6ab5-4f28-96bc-4e8f387343b6/files/55ab1e43-0afa-4d8f-bc37-d5e47e33eb64.jpg'
-              },
-              {
                 name: 'Максим П.',
-                role: 'Фрилансер',
-                text: 'Получил первый заказ еще до окончания курса. Материал структурирован идеально.',
-                photo: 'https://cdn.poehali.dev/projects/7710b90a-6ab5-4f28-96bc-4e8f387343b6/files/eb4a3c1f-3e2f-409f-a18f-91df99839bfb.jpg'
+                role: 'Студент',
+                text: 'Программа отлично структурирована. Каждый урок - новые знания и практика.',
+                photo: 'https://cdn.poehali.dev/projects/7710b90a-6ab5-4f28-96bc-4e8f387343b6/files/5a6a2565-6c8b-41a1-98b7-c6b3735648bc.jpg'
               },
               {
                 name: 'Ольга С.',
-                role: 'Архитектор',
-                text: 'Лучшее вложение в свое образование. Курс окупился за первый месяц работы.',
-                photo: 'https://cdn.poehali.dev/projects/7710b90a-6ab5-4f28-96bc-4e8f387343b6/files/0cd4555f-e07e-44e1-857f-da57e3b9a6d6.jpg'
-              },
-              {
-                name: 'Игорь Н.',
-                role: '3D визуализатор',
-                text: 'Профессиональный подход и качественная подача материала. Рекомендую всем начинающим.',
-                photo: 'https://cdn.poehali.dev/projects/7710b90a-6ab5-4f28-96bc-4e8f387343b6/files/d67f2737-b4d9-425a-be30-c36e1e7e3a56.jpg'
+                role: 'Дизайнер',
+                text: 'Наконец-то освоила 3D! Теперь показываю клиентам реалистичные проекты.',
+                photo: 'https://cdn.poehali.dev/projects/7710b90a-6ab5-4f28-96bc-4e8f387343b6/files/b97303af-d278-49d1-93e7-c21a79a9a5e8.jpg'
               }
             ].map((review, idx) => (
               <Card key={idx} className="hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer group">
                 <CardContent className="p-6">
-                  <div className="flex items-center gap-4 mb-4">
+                  <div className="flex items-center gap-3 mb-4">
                     <img 
-                      src={review.photo}
+                      src={review.photo} 
                       alt={review.name}
-                      className="w-16 h-16 rounded-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      className="w-12 h-12 rounded-full object-cover group-hover:scale-110 transition-transform duration-300"
                     />
                     <div>
-                      <h3 className="font-bold group-hover:text-primary transition-colors">{review.name}</h3>
-                      <p className="text-sm text-gray-600">{review.role}</p>
+                      <div className="font-bold group-hover:text-primary transition-colors">{review.name}</div>
+                      <div className="text-sm text-gray-500">{review.role}</div>
                     </div>
                   </div>
-                  <p className="text-gray-700">{review.text}</p>
+                  <div className="flex gap-1 mb-3">
+                    {[...Array(5)].map((_, i) => (
+                      <Icon key={i} name="Star" className="text-accent fill-accent group-hover:scale-110 transition-transform duration-300" size={14} />
+                    ))}
+                  </div>
+                  <p className="text-sm text-gray-600">"{review.text}"</p>
                 </CardContent>
               </Card>
             ))}
