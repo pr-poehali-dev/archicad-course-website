@@ -28,7 +28,7 @@ const Header = ({ onCTAClick }: HeaderProps) => {
 
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-800">
           <a href="#about" className="hover:text-primary transition whitespace-nowrap">О курсе</a>
-          <a href="#program" className="hover:text-primary transition whitespace-nowrap">Программа</a>
+          <a href="#curriculum" className="hover:text-primary transition whitespace-nowrap">Программа</a>
           <a href="#portfolio" className="hover:text-primary transition whitespace-nowrap">Работы</a>
           <a href="#reviews" className="hover:text-primary transition whitespace-nowrap">Отзывы</a>
           <a href="#contact" className="hover:text-primary transition whitespace-nowrap">Контакты</a>
@@ -68,8 +68,8 @@ const Header = ({ onCTAClick }: HeaderProps) => {
                 О курсе
               </a>
               <a 
-                href="#program" 
-                onClick={() => handleNavClick('#program')}
+                href="#curriculum" 
+                onClick={() => handleNavClick('#curriculum')}
                 className="text-sm hover:text-primary transition-all py-2"
               >
                 Программа

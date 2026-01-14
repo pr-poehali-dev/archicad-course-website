@@ -52,7 +52,7 @@ const MainContent = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-gray-700 to-gray-800 text-white">
+      <section id="pricing" className="py-20 bg-gradient-to-br from-gray-700 to-gray-800 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -126,7 +126,7 @@ const MainContent = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-gray-50">
+      <section id="benefits" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -186,7 +186,7 @@ const MainContent = () => {
         </div>
       </section>
 
-      <section id="program" className="relative py-20 overflow-hidden">
+      <section id="curriculum" className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center" style={{backgroundImage: 'url(https://cdn.poehali.dev/projects/7710b90a-6ab5-4f28-96bc-4e8f387343b6/files/f3a29e0a-731d-43b6-9c24-0db014135783.jpg)'}}></div>
         <div className="absolute inset-0 bg-white/50"></div>
         <div className="container mx-auto px-4 relative">
