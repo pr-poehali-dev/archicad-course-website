@@ -28,47 +28,17 @@ const Header = ({ onCTAClick }: HeaderProps) => {
 
 
 
-        <div className="hidden md:block">
-          <Button 
-            onClick={() => {
-              if (typeof window.ym !== 'undefined') {
-                window.ym(105952933, 'reachGoal', 'enroll_course');
-              }
-              onCTAClick();
-            }} 
-            className="bg-primary hover:bg-primary/90 animate-pulse-subtle"
-          >
-            Записаться на курс
-          </Button>
-        </div>
-
-        <Sheet open={isOpen} onOpenChange={setIsOpen}>
-          <SheetTrigger asChild className="md:hidden">
-            <Button variant="ghost" size="icon">
-              <Icon name="Menu" size={24} />
-            </Button>
-          </SheetTrigger>
-          <SheetContent side="right" className="w-[180px] pt-3 px-3 pb-3 min-h-[320px]">
-            <VisuallyHidden>
-              <SheetTitle>Навигация</SheetTitle>
-              <SheetDescription>Меню навигации по разделам сайта</SheetDescription>
-            </VisuallyHidden>
-            <nav className="flex flex-col gap-4 animate-in fade-in slide-in-from-right-5 duration-300 rounded-0 px-[5px] py-[5px] my-[5px] mx-[15px]">
-              <Button 
-                onClick={() => {
-                  if (typeof window.ym !== 'undefined') {
-                    window.ym(105952933, 'reachGoal', 'enroll_course');
-                  }
-                  setIsOpen(false);
-                  onCTAClick();
-                }} 
-                className="bg-primary hover:bg-primary/90 mt-4 w-full text-sm py-2.5 h-10"
-              >
-                Записаться
-              </Button>
-            </nav>
-          </SheetContent>
-        </Sheet>
+        <Button 
+          onClick={() => {
+            if (typeof window.ym !== 'undefined') {
+              window.ym(105952933, 'reachGoal', 'enroll_course');
+            }
+            onCTAClick();
+          }} 
+          className="bg-primary hover:bg-primary/90 animate-pulse-subtle"
+        >
+          Записаться на курс
+        </Button>
       </div>
     </header>
   );

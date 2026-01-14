@@ -52,60 +52,81 @@ const MainContent = () => {
         </div>
       </section>
 
-      <section id="pricing" className="py-20 bg-gradient-to-br from-primary/5 via-accent/5 to-primary/5">
+      <section className="py-20 bg-gradient-to-br from-gray-700 to-gray-800 text-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
+          <div className="max-w-4xl mx-auto text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               Курс «Archicad для дизайнеров и архитекторов»
             </h2>
-            <p className="text-lg text-gray-600">
-              Начните карьеру в 3D визуализации уже сегодня
+            <p className="text-base sm:text-xl text-white/90">
+              15 уроков • 2-3 месяца • Доступ навсегда
             </p>
           </div>
 
-          <Card className="max-w-2xl mx-auto hover:shadow-2xl transition-all duration-300 border-2 border-primary/20">
-            <CardContent className="p-8">
-              <div className="text-center mb-6">
-                <div className="inline-block px-4 py-2 bg-accent/10 rounded-full text-accent text-sm font-semibold mb-4">
-                  Полный доступ
+          <div className="bg-white text-gray-900 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12">
+              <div className="text-center md:text-left">
+                <div className="text-4xl sm:text-6xl font-bold text-primary mb-2">12 900 ₽</div>
+                <div className="text-lg text-gray-600 mb-6">Полная стоимость</div>
+                <div className="bg-accent/10 p-4 rounded-lg">
+                  <div className="flex items-center gap-3">
+                    <Icon name="CreditCard" className="text-accent" size={24} />
+                    <div>
+                      <div className="font-semibold">Оплата Долями</div>
+                      <div className="text-sm text-gray-600">от 3 225 ₽ × 4 платежа</div>
+                    </div>
+                  </div>
                 </div>
-                <div className="text-5xl font-bold text-primary mb-2">15 990 ₽</div>
-                <p className="text-gray-600">Единоразовая оплата</p>
               </div>
 
-              <div className="space-y-4 mb-8">
+              <div className="space-y-3">
+                <h3 className="font-bold text-lg mb-4">Что входит в курс:</h3>
                 {[
-                  '15 видеоуроков в Full HD качестве',
-                  'Доступ к курсу на 6 месяцев',
-                  'Все исходные файлы проектов',
-                  'Сертификат о прохождении курса',
-                  'Поддержка куратора в чате',
-                  'Проверка домашних заданий'
-                ].map((feature, idx) => (
+                  '15 практических уроков',
+                  'Все материалы для изучения',
+                  'Доступ к курсу навсегда',
+                  'Поддержка преподавателя',
+                  'Сертификат после обучения',
+                  'Возможность рассрочки'
+                ].map((item, idx) => (
                   <div key={idx} className="flex items-center gap-3">
-                    <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <Icon name="Check" className="text-primary" size={16} />
-                    </div>
-                    <span className="text-gray-700">{feature}</span>
+                    <Icon name="Check" className="text-accent" size={18} />
+                    <span className="text-sm">{item}</span>
                   </div>
                 ))}
               </div>
-
+            </div>
+            <div className="text-center mt-8">
               <Button 
-                className="w-full text-lg py-6 bg-gradient-to-r from-primary to-accent hover:shadow-xl hover:scale-105 transition-all duration-300"
+                size="lg" 
+                className="bg-primary hover:bg-primary/90 text-lg px-12 py-6 h-auto animate-pulse-subtle"
                 onClick={() => {
-                  const paymentSection = document.getElementById('payment');
-                  paymentSection?.scrollIntoView({ behavior: 'smooth' });
+                  if (typeof window.ym !== 'undefined') {
+                    window.ym(105952933, 'reachGoal', 'enroll_course_pricing');
+                  }
+                  const urlParams = new URLSearchParams(window.location.search);
+                  const utmSource = urlParams.get('utm_source') || '';
+                  const utmMedium = urlParams.get('utm_medium') || '';
+                  const utmCampaign = urlParams.get('utm_campaign') || '';
+                  const utmContent = urlParams.get('utm_content') || '';
+                  const utmTerm = urlParams.get('utm_term') || '';
+                  let refUrl = 'https://ihclick.ru/?p=272195&o=272212&idp=314945&erid=2VtzqvHfAQk';
+                  if (utmSource) refUrl += `&utm_source=${encodeURIComponent(utmSource)}`;
+                  if (utmMedium) refUrl += `&utm_medium=${encodeURIComponent(utmMedium)}`;
+                  if (utmCampaign) refUrl += `&utm_campaign=${encodeURIComponent(utmCampaign)}`;
+                  if (utmContent) refUrl += `&utm_content=${encodeURIComponent(utmContent)}`;
+                  if (utmTerm) refUrl += `&utm_term=${encodeURIComponent(utmTerm)}`;
+                  window.open(refUrl, '_blank');
                 }}
               >
-                Записаться на курс
+                Начать обучение
               </Button>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section id="benefits" className="py-20 bg-white">
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
