@@ -15,8 +15,17 @@ const Header = ({ onCTAClick }: HeaderProps) => {
     setIsOpen(false);
     setTimeout(() => {
       const element = document.querySelector(href);
-      element?.scrollIntoView({ behavior: 'smooth' });
-    }, 100);
+      if (element) {
+        const headerOffset = 80;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }, 300);
   };
 
   const navLinks = [
