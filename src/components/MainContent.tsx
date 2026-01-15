@@ -12,7 +12,7 @@ const MainContent = () => {
               <img 
                 src="https://cdn.poehali.dev/files/Ирина 2.jpg"
                 alt="Ирина Бурцева" 
-                className="rounded-2xl shadow-xl w-full max-w-sm mx-auto"
+                className="rounded-2xl shadow-xl w-full max-w-xs mx-auto"
               />
               <div className="mt-6 p-6 bg-gradient-to-br from-primary/5 to-accent/5 rounded-xl">
                 <h3 className="font-bold text-lg mb-4 text-gray-900">Для кого этот курс:</h3>
