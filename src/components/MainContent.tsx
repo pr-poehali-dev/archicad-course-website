@@ -237,7 +237,7 @@ const MainContent = () => {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
             {[
               {
                 image: 'https://cdn.poehali.dev/projects/7710b90a-6ab5-4f28-96bc-4e8f387343b6/files/60c3ac1a-54c3-4767-94c4-428e9c5e9dbb.jpg',
@@ -260,19 +260,18 @@ const MainContent = () => {
                 author: 'Максим П.'
               }
             ].map((work, idx) => (
-              <Card key={idx} className="overflow-hidden group hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer">
-                <div className="relative h-64 overflow-hidden">
+              <Card key={idx} className="overflow-hidden group hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+                <div className="relative aspect-square overflow-hidden">
                   <img 
                     src={work.image}
                     alt={work.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3">
+                    <h3 className="font-bold text-white text-sm mb-1">{work.title}</h3>
+                    <p className="text-xs text-white/80">{work.author}</p>
+                  </div>
                 </div>
-                <CardContent className="p-6">
-                  <h3 className="font-bold text-lg mb-2 group-hover:text-primary transition-colors">{work.title}</h3>
-                  <p className="text-sm text-gray-600">Автор: {work.author}</p>
-                </CardContent>
               </Card>
             ))}
           </div>
