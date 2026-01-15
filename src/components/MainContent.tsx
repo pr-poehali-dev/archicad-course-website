@@ -52,7 +52,7 @@ const MainContent = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-gray-700 to-gray-800 text-white">
+      <section id="pricing" className="py-20 bg-gradient-to-br from-gray-700 to-gray-800 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
