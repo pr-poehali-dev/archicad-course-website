@@ -7,16 +7,32 @@ const MainContent = () => {
     <>
       <section id="about" className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-            <div>
+          <div className="grid lg:grid-cols-3 gap-12 items-start max-w-6xl mx-auto">
+            <div className="lg:col-span-1">
               <img 
                 src="https://cdn.poehali.dev/files/Ирина 2.jpg"
                 alt="Ирина Бурцева" 
-                className="rounded-2xl shadow-xl w-full"
+                className="rounded-2xl shadow-xl w-full max-w-sm mx-auto"
               />
+              <div className="mt-6 p-6 bg-gradient-to-br from-primary/5 to-accent/5 rounded-xl">
+                <h3 className="font-bold text-lg mb-4 text-gray-900">Для кого этот курс:</h3>
+                <div className="space-y-3">
+                  {[
+                    'Начинающих архитекторов',
+                    'Дизайнеров интерьеров',
+                    'Студентов профильных вузов',
+                    'Тех, кто хочет сменить профессию'
+                  ].map((item, idx) => (
+                    <div key={idx} className="flex items-center gap-2">
+                      <Icon name="User" className="text-primary" size={16} />
+                      <span className="text-sm text-gray-700">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
             
-            <div className="space-y-6">
+            <div className="lg:col-span-2 space-y-6">
               <div className="inline-block px-4 py-1 bg-accent/10 rounded-full text-accent text-sm font-semibold">
                 Автор курса
               </div>
@@ -46,6 +62,23 @@ const MainContent = () => {
                     <span className="text-gray-700">{item}</span>
                   </div>
                 ))}
+              </div>
+              
+              <div className="grid sm:grid-cols-2 gap-4 mt-8">
+                <div className="p-4 bg-white border-2 border-primary/20 rounded-lg">
+                  <div className="flex items-center gap-3 mb-2">
+                    <Icon name="BookOpen" className="text-primary" size={24} />
+                    <h4 className="font-bold text-gray-900">15 уроков</h4>
+                  </div>
+                  <p className="text-sm text-gray-600">Пошаговое изучение программы от простого к сложному</p>
+                </div>
+                <div className="p-4 bg-white border-2 border-accent/20 rounded-lg">
+                  <div className="flex items-center gap-3 mb-2">
+                    <Icon name="Clock" className="text-accent" size={24} />
+                    <h4 className="font-bold text-gray-900">2-3 месяца</h4>
+                  </div>
+                  <p className="text-sm text-gray-600">Комфортный темп обучения в удобное время</p>
+                </div>
               </div>
             </div>
           </div>
